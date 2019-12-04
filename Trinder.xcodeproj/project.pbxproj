@@ -13,6 +13,12 @@
 		301D60772396B89F00AB84E1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 301D60752396B89F00AB84E1 /* Main.storyboard */; };
 		301D60792396B89F00AB84E1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 301D60782396B89F00AB84E1 /* Assets.xcassets */; };
 		301D607C2396B89F00AB84E1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 301D607A2396B89F00AB84E1 /* LaunchScreen.storyboard */; };
+		BD72E5312397B539009DC584 /* RightAnswer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD72E5302397B539009DC584 /* RightAnswer.storyboard */; };
+		BD72E5342397B627009DC584 /* BadAnswer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD72E5322397B627009DC584 /* BadAnswer.storyboard */; };
+		BD72E5362397B8CB009DC584 /* History.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD72E5352397B8CB009DC584 /* History.storyboard */; };
+		BD72E5382397BA0D009DC584 /* Game.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD72E5372397BA0D009DC584 /* Game.storyboard */; };
+		BD72E53B2397BA7B009DC584 /* ChatBot.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD72E5392397BA7B009DC584 /* ChatBot.storyboard */; };
+		BD72E53D2397BACD009DC584 /* ChatBotSearch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD72E53C2397BACD009DC584 /* ChatBotSearch.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +30,12 @@
 		301D60782396B89F00AB84E1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		301D607B2396B89F00AB84E1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		301D607D2396B89F00AB84E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BD72E5302397B539009DC584 /* RightAnswer.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = RightAnswer.storyboard; path = Trinder/View/GameView/RightAnswer.storyboard; sourceTree = SOURCE_ROOT; };
+		BD72E5332397B627009DC584 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/BadAnswer.storyboard; sourceTree = "<group>"; };
+		BD72E5352397B8CB009DC584 /* History.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = History.storyboard; path = Trinder/View/HistoryView/History.storyboard; sourceTree = SOURCE_ROOT; };
+		BD72E5372397BA0D009DC584 /* Game.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Game.storyboard; path = Trinder/View/GameView/Game.storyboard; sourceTree = SOURCE_ROOT; };
+		BD72E53A2397BA7B009DC584 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/ChatBot.storyboard; sourceTree = "<group>"; };
+		BD72E53C2397BACD009DC584 /* ChatBotSearch.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = ChatBotSearch.storyboard; path = Trinder/View/ChatBotView/ChatBotSearch.storyboard; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,11 +69,7 @@
 			isa = PBXGroup;
 			children = (
 				BD5726EF2397A9F3001ED499 /* View */,
-				301D606F2396B89E00AB84E1 /* AppDelegate.swift */,
-				301D60712396B89E00AB84E1 /* SceneDelegate.swift */,
 				301D60732396B89E00AB84E1 /* ViewController.swift */,
-				301D60782396B89F00AB84E1 /* Assets.xcassets */,
-				301D607A2396B89F00AB84E1 /* LaunchScreen.storyboard */,
 				301D607D2396B89F00AB84E1 /* Info.plist */,
 			);
 			path = Trinder;
@@ -70,9 +78,51 @@
 		BD5726EF2397A9F3001ED499 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				BD72E5412397BB50009DC584 /* Supporting Files */,
+				BD72E5402397BB37009DC584 /* HistoryView */,
+				BD72E53F2397BB1E009DC584 /* GameView */,
+				BD72E53E2397BB09009DC584 /* ChatBotView */,
 				301D60752396B89F00AB84E1 /* Main.storyboard */,
+				301D607A2396B89F00AB84E1 /* LaunchScreen.storyboard */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		BD72E53E2397BB09009DC584 /* ChatBotView */ = {
+			isa = PBXGroup;
+			children = (
+				BD72E5392397BA7B009DC584 /* ChatBot.storyboard */,
+				BD72E53C2397BACD009DC584 /* ChatBotSearch.storyboard */,
+			);
+			path = ChatBotView;
+			sourceTree = "<group>";
+		};
+		BD72E53F2397BB1E009DC584 /* GameView */ = {
+			isa = PBXGroup;
+			children = (
+				BD72E5372397BA0D009DC584 /* Game.storyboard */,
+				BD72E5302397B539009DC584 /* RightAnswer.storyboard */,
+				BD72E5322397B627009DC584 /* BadAnswer.storyboard */,
+			);
+			path = GameView;
+			sourceTree = "<group>";
+		};
+		BD72E5402397BB37009DC584 /* HistoryView */ = {
+			isa = PBXGroup;
+			children = (
+				BD72E5352397B8CB009DC584 /* History.storyboard */,
+			);
+			path = HistoryView;
+			sourceTree = "<group>";
+		};
+		BD72E5412397BB50009DC584 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				301D606F2396B89E00AB84E1 /* AppDelegate.swift */,
+				301D60712396B89E00AB84E1 /* SceneDelegate.swift */,
+				301D60782396B89F00AB84E1 /* Assets.xcassets */,
+			);
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -133,9 +183,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD72E5342397B627009DC584 /* BadAnswer.storyboard in Resources */,
 				301D607C2396B89F00AB84E1 /* LaunchScreen.storyboard in Resources */,
+				BD72E5382397BA0D009DC584 /* Game.storyboard in Resources */,
 				301D60792396B89F00AB84E1 /* Assets.xcassets in Resources */,
 				301D60772396B89F00AB84E1 /* Main.storyboard in Resources */,
+				BD72E53D2397BACD009DC584 /* ChatBotSearch.storyboard in Resources */,
+				BD72E5312397B539009DC584 /* RightAnswer.storyboard in Resources */,
+				BD72E53B2397BA7B009DC584 /* ChatBot.storyboard in Resources */,
+				BD72E5362397B8CB009DC584 /* History.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -169,6 +225,22 @@
 				301D607B2396B89F00AB84E1 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		BD72E5322397B627009DC584 /* BadAnswer.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BD72E5332397B627009DC584 /* Base */,
+			);
+			name = BadAnswer.storyboard;
+			sourceTree = "<group>";
+		};
+		BD72E5392397BA7B009DC584 /* ChatBot.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BD72E53A2397BA7B009DC584 /* Base */,
+			);
+			name = ChatBot.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
