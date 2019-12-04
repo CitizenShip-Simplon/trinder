@@ -19,6 +19,10 @@
 		BD72E5382397BA0D009DC584 /* Game.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD72E5372397BA0D009DC584 /* Game.storyboard */; };
 		BD72E53B2397BA7B009DC584 /* ChatBot.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD72E5392397BA7B009DC584 /* ChatBot.storyboard */; };
 		BD72E53D2397BACD009DC584 /* ChatBotSearch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD72E53C2397BACD009DC584 /* ChatBotSearch.storyboard */; };
+		BD72E54B2397C9F0009DC584 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD72E54A2397C9F0009DC584 /* HistoryViewController.swift */; };
+		BD72E54E2397CB61009DC584 /* menageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD72E54C2397CB61009DC584 /* menageCollectionViewCell.swift */; };
+		BD72E54F2397CB61009DC584 /* menageCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD72E54D2397CB61009DC584 /* menageCollectionViewCell.xib */; };
+		BD72E5512397FDB2009DC584 /* imageViewerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD72E5502397FDB2009DC584 /* imageViewerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +40,10 @@
 		BD72E5372397BA0D009DC584 /* Game.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Game.storyboard; path = Trinder/View/GameView/Game.storyboard; sourceTree = SOURCE_ROOT; };
 		BD72E53A2397BA7B009DC584 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/ChatBot.storyboard; sourceTree = "<group>"; };
 		BD72E53C2397BACD009DC584 /* ChatBotSearch.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = ChatBotSearch.storyboard; path = Trinder/View/ChatBotView/ChatBotSearch.storyboard; sourceTree = SOURCE_ROOT; };
+		BD72E54A2397C9F0009DC584 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
+		BD72E54C2397CB61009DC584 /* menageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = menageCollectionViewCell.swift; sourceTree = "<group>"; };
+		BD72E54D2397CB61009DC584 /* menageCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = menageCollectionViewCell.xib; sourceTree = "<group>"; };
+		BD72E5502397FDB2009DC584 /* imageViewerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = imageViewerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,8 +76,9 @@
 		301D606E2396B89E00AB84E1 /* Trinder */ = {
 			isa = PBXGroup;
 			children = (
+				BD72E5412397BB50009DC584 /* Supporting Files */,
 				BD5726EF2397A9F3001ED499 /* View */,
-				301D60732396B89E00AB84E1 /* ViewController.swift */,
+				BD72E5422397C5D4009DC584 /* Contoller */,
 				301D607D2396B89F00AB84E1 /* Info.plist */,
 			);
 			path = Trinder;
@@ -78,7 +87,6 @@
 		BD5726EF2397A9F3001ED499 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				BD72E5412397BB50009DC584 /* Supporting Files */,
 				BD72E5402397BB37009DC584 /* HistoryView */,
 				BD72E53F2397BB1E009DC584 /* GameView */,
 				BD72E53E2397BB09009DC584 /* ChatBotView */,
@@ -123,6 +131,26 @@
 				301D60782396B89F00AB84E1 /* Assets.xcassets */,
 			);
 			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BD72E5422397C5D4009DC584 /* Contoller */ = {
+			isa = PBXGroup;
+			children = (
+				BD72E5432397C5ED009DC584 /* HistoryController */,
+				301D60732396B89E00AB84E1 /* ViewController.swift */,
+			);
+			path = Contoller;
+			sourceTree = "<group>";
+		};
+		BD72E5432397C5ED009DC584 /* HistoryController */ = {
+			isa = PBXGroup;
+			children = (
+				BD72E54A2397C9F0009DC584 /* HistoryViewController.swift */,
+				BD72E54C2397CB61009DC584 /* menageCollectionViewCell.swift */,
+				BD72E54D2397CB61009DC584 /* menageCollectionViewCell.xib */,
+				BD72E5502397FDB2009DC584 /* imageViewerViewController.swift */,
+			);
+			path = HistoryController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -188,6 +216,7 @@
 				BD72E5382397BA0D009DC584 /* Game.storyboard in Resources */,
 				301D60792396B89F00AB84E1 /* Assets.xcassets in Resources */,
 				301D60772396B89F00AB84E1 /* Main.storyboard in Resources */,
+				BD72E54F2397CB61009DC584 /* menageCollectionViewCell.xib in Resources */,
 				BD72E53D2397BACD009DC584 /* ChatBotSearch.storyboard in Resources */,
 				BD72E5312397B539009DC584 /* RightAnswer.storyboard in Resources */,
 				BD72E53B2397BA7B009DC584 /* ChatBot.storyboard in Resources */,
@@ -204,6 +233,9 @@
 			files = (
 				301D60742396B89F00AB84E1 /* ViewController.swift in Sources */,
 				301D60702396B89E00AB84E1 /* AppDelegate.swift in Sources */,
+				BD72E5512397FDB2009DC584 /* imageViewerViewController.swift in Sources */,
+				BD72E54B2397C9F0009DC584 /* HistoryViewController.swift in Sources */,
+				BD72E54E2397CB61009DC584 /* menageCollectionViewCell.swift in Sources */,
 				301D60722396B89E00AB84E1 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
