@@ -1,29 +1,78 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="PYx-CU-tM4">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Messagerie-->
+        <!--View Controller-->
         <scene sceneID="OM6-47-EvC">
             <objects>
                 <viewController id="PYx-CU-tM4" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jHU-he-zaT">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="sk1-Sd-imr">
+                                <rect key="frame" x="197" y="244" width="20" height="20"/>
+                            </activityIndicatorView>
+                            <searchBar contentMode="redraw" fixedFrame="YES" text="bouteille" translatesAutoresizingMaskIntoConstraints="NO" id="WL9-Dp-cDv">
+                                <rect key="frame" x="0.0" y="134" width="414" height="56"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Que souhaite tu recycler aujourd'hui?" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VtD-TM-jXS">
+                                <rect key="frame" x="81" y="74" width="268" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" spacing="91" translatesAutoresizingMaskIntoConstraints="NO" id="0Ek-rh-lm0" userLabel="Stack View POUBELLE">
+                                <rect key="frame" x="20" y="649" width="374" height="64"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TrashGreen" translatesAutoresizingMaskIntoConstraints="NO" id="01I-RA-Ulv" userLabel="poubelle verte">
+                                        <rect key="frame" x="0.0" y="0.0" width="64" height="64"/>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TrashWhite" translatesAutoresizingMaskIntoConstraints="NO" id="MVL-ht-jRD" userLabel="poubelle blanche">
+                                        <rect key="frame" x="155" y="0.0" width="64" height="64"/>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TrashYellow" translatesAutoresizingMaskIntoConstraints="NO" id="rfz-T2-5j9" userLabel="poubelle jaune">
+                                        <rect key="frame" x="310" y="0.0" width="64" height="64"/>
+                                    </imageView>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="44" translatesAutoresizingMaskIntoConstraints="NO" id="HkY-NV-UKq">
+                                <rect key="frame" x="9" y="431" width="396" height="34"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="elle est en verre" borderStyle="roundedRect" textAlignment="center" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qww-HO-Y2V">
+                                        <rect key="frame" x="0.0" y="0.0" width="156.33333333333334" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="elle est en plastique" borderStyle="roundedRect" textAlignment="center" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mvV-in-Pxw">
+                                        <rect key="frame" x="200.33333333333337" y="0.0" width="195.66666666666663" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="sk1-Sd-imr" firstAttribute="centerX" secondItem="jHU-he-zaT" secondAttribute="centerX" id="5F6-Qw-YsI"/>
+                            <constraint firstItem="rvh-Yv-oq8" firstAttribute="trailing" secondItem="HkY-NV-UKq" secondAttribute="trailing" constant="9" id="OID-O3-HB4"/>
+                            <constraint firstItem="HkY-NV-UKq" firstAttribute="centerY" secondItem="jHU-he-zaT" secondAttribute="centerY" id="UBR-ck-ul8"/>
+                            <constraint firstItem="HkY-NV-UKq" firstAttribute="leading" secondItem="rvh-Yv-oq8" secondAttribute="leading" constant="9" id="gsn-6p-MGe"/>
+                            <constraint firstItem="HkY-NV-UKq" firstAttribute="centerX" secondItem="jHU-he-zaT" secondAttribute="centerX" id="ni6-G3-at0"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="rvh-Yv-oq8"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Messagerie" image="message" catalog="system" selectedImage="message" id="PGg-eI-pWz">
-                        <color key="badgeColor" cocoaTouchSystemColor="darkTextColor"/>
-                    </tabBarItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="72s-93-m16" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-688" y="1710"/>
+            <point key="canvasLocation" x="-688.40579710144937" y="1709.5982142857142"/>
         </scene>
         <!--ChatBotSearch-->
         <scene sceneID="Unn-hY-SKD">
@@ -35,6 +84,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="message" catalog="system" width="64" height="56"/>
+        <image name="TrashGreen" width="64" height="64"/>
+        <image name="TrashWhite" width="64" height="64"/>
+        <image name="TrashYellow" width="64" height="64"/>
     </resources>
 </document>
