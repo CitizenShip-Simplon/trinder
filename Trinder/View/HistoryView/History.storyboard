@@ -16,29 +16,79 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="fH8-O7-1Dx">
-                                <rect key="frame" x="20" y="190" width="374" height="606"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="fH8-O7-1Dx">
+                                <rect key="frame" x="0.0" y="95" width="414" height="767"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="I8Z-MM-Ko3">
-                                    <size key="itemSize" width="100" height="100"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="2" minimumInteritemSpacing="2" id="I8Z-MM-Ko3">
+                                    <size key="itemSize" width="200" height="200"/>
+                                    <size key="headerReferenceSize" width="50" height="50"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                    <inset key="sectionInset" minX="2" minY="2" maxX="2" maxY="2"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="TrashCell" id="Y4a-cg-A1d" customClass="menageCollectionViewCell" customModule="Trinder" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="Y4a-cg-A1d" userLabel="HistoryCell" customClass="HistoryCell" customModule="Trinder" customModuleProvider="target">
+                                        <rect key="frame" x="2" y="52" width="200" height="200"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="ZSp-SF-5d6">
-                                            <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PlasticGlass" translatesAutoresizingMaskIntoConstraints="NO" id="Moo-o1-NAl">
+                                                    <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="Moo-o1-NAl" secondAttribute="height" multiplier="1:1" id="OEd-OS-2B6"/>
+                                                        <constraint firstAttribute="width" constant="200" id="X3a-Ch-1tC"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Moo-o1-NAl" firstAttribute="top" secondItem="ZSp-SF-5d6" secondAttribute="top" id="ACU-xQ-chl"/>
+                                                <constraint firstAttribute="trailing" secondItem="Moo-o1-NAl" secondAttribute="trailing" id="Hhi-lM-udn"/>
+                                                <constraint firstItem="Moo-o1-NAl" firstAttribute="leading" secondItem="ZSp-SF-5d6" secondAttribute="leading" id="Wxc-rm-SGN"/>
+                                                <constraint firstAttribute="bottom" secondItem="Moo-o1-NAl" secondAttribute="bottom" id="uyE-Ew-lTa"/>
+                                            </constraints>
                                         </collectionViewCellContentView>
+                                        <size key="customSize" width="200" height="200"/>
+                                        <connections>
+                                            <outlet property="mainImageView" destination="Moo-o1-NAl" id="qQA-9y-6TN"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
+                                <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="Reuse" id="kB8-Ft-5JA" customClass="HistoryReusableView" customModule="Trinder" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Caterory trashs" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eHj-og-o0i">
+                                            <rect key="frame" x="58" y="0.0" width="316" height="50"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hTt-GN-DcP">
+                                            <rect key="frame" x="8" y="8" width="42" height="34"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
+                                    </subviews>
+                                </collectionReusableView>
                             </collectionView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="History" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zzc-zD-mCG">
+                                <rect key="frame" x="2" y="49" width="410" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="ic5-iT-pwz" firstAttribute="trailing" secondItem="Zzc-zD-mCG" secondAttribute="trailing" constant="2" id="5Uv-T4-opD"/>
+                            <constraint firstItem="Zzc-zD-mCG" firstAttribute="leading" secondItem="ic5-iT-pwz" secondAttribute="leading" constant="2" id="Bxd-s5-Fmi"/>
+                            <constraint firstItem="Zzc-zD-mCG" firstAttribute="top" secondItem="ic5-iT-pwz" secondAttribute="top" constant="5" id="M6C-ll-paB"/>
+                            <constraint firstItem="ic5-iT-pwz" firstAttribute="trailing" secondItem="fH8-O7-1Dx" secondAttribute="trailing" id="QNL-Vz-puP"/>
+                            <constraint firstItem="fH8-O7-1Dx" firstAttribute="top" secondItem="Zzc-zD-mCG" secondAttribute="bottom" constant="25" id="Vne-q9-ut7"/>
+                            <constraint firstItem="ic5-iT-pwz" firstAttribute="bottom" secondItem="fH8-O7-1Dx" secondAttribute="bottom" id="a2q-PZ-zlt"/>
+                            <constraint firstItem="fH8-O7-1Dx" firstAttribute="leading" secondItem="ic5-iT-pwz" secondAttribute="leading" id="jHO-vY-baD"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="ic5-iT-pwz"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Historique" image="doc.text.magnifyingglass" catalog="system" id="bzK-kD-B77">
@@ -46,40 +96,15 @@
                     </tabBarItem>
                     <connections>
                         <outlet property="collectionView" destination="fH8-O7-1Dx" id="MTu-hr-DBu"/>
-                        <segue destination="lcZ-2Q-zHQ" kind="show" identifier="viewImageSegueIdentifier" id="QjK-wb-Wh8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MMb-WX-NJI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-671.01449275362324" y="858.48214285714278"/>
         </scene>
-        <!--Image Viewer View Controller-->
-        <scene sceneID="bcT-7O-NxZ">
-            <objects>
-                <viewController id="lcZ-2Q-zHQ" customClass="imageViewerViewController" customModule="Trinder" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8aH-jd-Ein">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SPY-bo-Jrm">
-                                <rect key="frame" x="87" y="62" width="240" height="208"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                        </subviews>
-                        <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="tnM-pY-KBY"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="zV7-IW-y9b"/>
-                    <connections>
-                        <outlet property="imageSelectedImageView" destination="SPY-bo-Jrm" id="b0b-v1-S2z"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="RND-wR-U2h" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="220.28985507246378" y="858.48214285714278"/>
-        </scene>
     </scenes>
     <resources>
+        <image name="PlasticGlass" width="3024" height="4032"/>
         <image name="doc.text.magnifyingglass" catalog="system" width="58" height="64"/>
     </resources>
 </document>
