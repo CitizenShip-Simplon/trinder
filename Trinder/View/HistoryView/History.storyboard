@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="FK9-p0-LLK">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7np-Nz-mFR">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Historique-->
+        <!--History View Controller-->
         <scene sceneID="n4N-St-G66">
             <objects>
                 <viewController id="FK9-p0-LLK" customClass="HistoryViewController" customModule="Trinder" customModuleProvider="target" sceneMemberID="viewController">
@@ -17,8 +17,8 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="fH8-O7-1Dx">
-                                <rect key="frame" x="0.0" y="95" width="414" height="767"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <rect key="frame" x="0.0" y="139" width="414" height="723"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="2" minimumInteritemSpacing="2" id="I8Z-MM-Ko3">
                                     <size key="itemSize" width="200" height="200"/>
                                     <size key="headerReferenceSize" width="50" height="50"/>
@@ -33,7 +33,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PlasticGlass" translatesAutoresizingMaskIntoConstraints="NO" id="Moo-o1-NAl">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="alarmClock" translatesAutoresizingMaskIntoConstraints="NO" id="Moo-o1-NAl">
                                                     <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="Moo-o1-NAl" secondAttribute="height" multiplier="1:1" id="OEd-OS-2B6"/>
@@ -58,6 +58,11 @@
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
+                                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gtE-Y8-h0k">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        </view>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Caterory trashs" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eHj-og-o0i">
                                             <rect key="frame" x="58" y="0.0" width="316" height="50"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -65,15 +70,19 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hTt-GN-DcP">
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="trashBrown" translatesAutoresizingMaskIntoConstraints="NO" id="hTt-GN-DcP">
                                             <rect key="frame" x="8" y="8" width="42" height="34"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         </imageView>
                                     </subviews>
+                                    <connections>
+                                        <outlet property="iconTrash" destination="hTt-GN-DcP" id="hzZ-D3-bCk"/>
+                                        <outlet property="titleSectionLabel" destination="eHj-og-o0i" id="64p-7t-l45"/>
+                                    </connections>
                                 </collectionReusableView>
                             </collectionView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="History" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zzc-zD-mCG">
-                                <rect key="frame" x="2" y="49" width="410" height="21"/>
+                                <rect key="frame" x="2" y="93" width="410" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -91,20 +100,121 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ic5-iT-pwz"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Historique" image="doc.text.magnifyingglass" catalog="system" id="bzK-kD-B77">
-                        <color key="badgeColor" cocoaTouchSystemColor="darkTextColor"/>
-                    </tabBarItem>
+                    <navigationItem key="navigationItem" id="UHp-6n-AZR"/>
                     <connections>
                         <outlet property="collectionView" destination="fH8-O7-1Dx" id="MTu-hr-DBu"/>
+                        <segue destination="Vxf-PJ-yUo" kind="show" identifier="Segue" id="PT4-Nn-LGu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MMb-WX-NJI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="239.13043478260872" y="858.48214285714278"/>
+        </scene>
+        <!--History Detail View Controller-->
+        <scene sceneID="RxE-Kh-x6u">
+            <objects>
+                <viewController id="Vxf-PJ-yUo" customClass="HistoryDetailViewController" customModule="Trinder" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="H2n-YX-VkI">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aLC-S2-z3p">
+                                <rect key="frame" x="20" y="118" width="374" height="215"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="PCV-Zk-c7Q">
+                                        <rect key="frame" x="5" y="5" width="364" height="205"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="glasses" translatesAutoresizingMaskIntoConstraints="NO" id="iEr-JB-dKK" userLabel="imageProduct">
+                                                <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="iEr-JB-dKK" secondAttribute="height" multiplier="1:1" id="SIJ-NQ-bDh"/>
+                                                    <constraint firstAttribute="width" constant="150" id="biu-J9-ITS"/>
+                                                </constraints>
+                                            </imageView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="p9r-1B-4nM">
+                                                <rect key="frame" x="160" y="0.0" width="204" height="109.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Product name " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PO2-ZM-TfZ">
+                                                        <rect key="frame" x="0.0" y="0.0" width="132" height="23"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="fzajpkjfzapkfjpzajfpzoajfozjaôfjzapofjzpaojfpzoajfozajfpozajfpzoajfzofjzaojfzpofzafakfnzakfnpza" textAlignment="natural" lineBreakMode="clip" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aR0-cd-Obb">
+                                                        <rect key="frame" x="0.0" y="28" width="203.5" height="81.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="PCV-Zk-c7Q" firstAttribute="top" secondItem="aLC-S2-z3p" secondAttribute="top" constant="5" id="7a3-yo-DzU"/>
+                                    <constraint firstAttribute="bottom" secondItem="PCV-Zk-c7Q" secondAttribute="bottom" constant="5" id="St1-ZK-wUV"/>
+                                    <constraint firstAttribute="trailing" secondItem="PCV-Zk-c7Q" secondAttribute="trailing" constant="5" id="ku8-DV-dqO"/>
+                                    <constraint firstItem="PCV-Zk-c7Q" firstAttribute="leading" secondItem="aLC-S2-z3p" secondAttribute="leading" constant="5" id="zM0-jc-AvX"/>
+                                </constraints>
+                            </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="traskTruck" translatesAutoresizingMaskIntoConstraints="NO" id="ucp-Zv-mRu" userLabel="iconTrash">
+                                <rect key="frame" x="134" y="363" width="146" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="G3q-XZ-SMb"/>
+                                    <constraint firstAttribute="width" secondItem="ucp-Zv-mRu" secondAttribute="height" multiplier="212:145" id="TWI-8D-Dml"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="8ls-bY-yHf" firstAttribute="trailing" secondItem="aLC-S2-z3p" secondAttribute="trailing" constant="20" id="HOc-Qh-P6t"/>
+                            <constraint firstItem="8ls-bY-yHf" firstAttribute="bottom" secondItem="aLC-S2-z3p" secondAttribute="bottom" constant="529" id="JN5-Yx-wRh"/>
+                            <constraint firstItem="ucp-Zv-mRu" firstAttribute="top" secondItem="aLC-S2-z3p" secondAttribute="bottom" constant="30" id="exj-EZ-324"/>
+                            <constraint firstItem="ucp-Zv-mRu" firstAttribute="centerX" secondItem="H2n-YX-VkI" secondAttribute="centerX" id="oPB-jG-mnb"/>
+                            <constraint firstItem="aLC-S2-z3p" firstAttribute="leading" secondItem="8ls-bY-yHf" secondAttribute="leading" constant="20" id="wGQ-Hr-sxs"/>
+                            <constraint firstItem="aLC-S2-z3p" firstAttribute="top" secondItem="8ls-bY-yHf" secondAttribute="top" constant="30" id="ziH-ug-ThU"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="8ls-bY-yHf"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="iSq-3f-ZUa"/>
+                    <connections>
+                        <outlet property="backgroundView" destination="aLC-S2-z3p" id="xaf-c1-1u4"/>
+                        <outlet property="productImageView" destination="iEr-JB-dKK" id="Chx-7R-lvD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GDS-oM-bu8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1063.768115942029" y="857.8125"/>
+        </scene>
+        <!--Historique-->
+        <scene sceneID="wxc-vO-jCF">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="7np-Nz-mFR" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Historique" image="doc.text.magnifyingglass" catalog="system" id="bzK-kD-B77">
+                        <color key="badgeColor" cocoaTouchSystemColor="darkTextColor"/>
+                    </tabBarItem>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="GF0-az-0ny">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="FK9-p0-LLK" kind="relationship" relationship="rootViewController" id="jlw-cT-tvx"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XRo-N6-mcz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-671.01449275362324" y="858.48214285714278"/>
         </scene>
     </scenes>
     <resources>
-        <image name="PlasticGlass" width="3024" height="4032"/>
+        <image name="alarmClock" width="6000" height="4000"/>
         <image name="doc.text.magnifyingglass" catalog="system" width="58" height="64"/>
+        <image name="glasses" width="5184" height="3456"/>
+        <image name="trashBrown" width="64" height="64"/>
+        <image name="traskTruck" width="64" height="64"/>
     </resources>
 </document>

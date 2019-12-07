@@ -21,6 +21,7 @@
 		BD72E54B2397C9F0009DC584 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD72E54A2397C9F0009DC584 /* HistoryViewController.swift */; };
 		BD9B4A17239B11EC00D176F7 /* HistoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9B4A16239B11EC00D176F7 /* HistoryCell.swift */; };
 		BD9B4A19239B148800D176F7 /* HistoryReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9B4A18239B148800D176F7 /* HistoryReusableView.swift */; };
+		BD9B4A1B239BCBAF00D176F7 /* HistoryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9B4A1A239BCBAF00D176F7 /* HistoryDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		BD72E54A2397C9F0009DC584 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 		BD9B4A16239B11EC00D176F7 /* HistoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryCell.swift; sourceTree = "<group>"; };
 		BD9B4A18239B148800D176F7 /* HistoryReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryReusableView.swift; sourceTree = "<group>"; };
+		BD9B4A1A239BCBAF00D176F7 /* HistoryDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +145,7 @@
 				BD9B4A18239B148800D176F7 /* HistoryReusableView.swift */,
 				BD9B4A16239B11EC00D176F7 /* HistoryCell.swift */,
 				BD72E54A2397C9F0009DC584 /* HistoryViewController.swift */,
+				BD9B4A1A239BCBAF00D176F7 /* HistoryDetailViewController.swift */,
 			);
 			path = HistoryController;
 			sourceTree = "<group>";
@@ -226,6 +229,7 @@
 			files = (
 				BD9B4A17239B11EC00D176F7 /* HistoryCell.swift in Sources */,
 				301D60702396B89E00AB84E1 /* AppDelegate.swift in Sources */,
+				BD9B4A1B239BCBAF00D176F7 /* HistoryDetailViewController.swift in Sources */,
 				BD9B4A19239B148800D176F7 /* HistoryReusableView.swift in Sources */,
 				BD72E54B2397C9F0009DC584 /* HistoryViewController.swift in Sources */,
 				301D60722396B89E00AB84E1 /* SceneDelegate.swift in Sources */,

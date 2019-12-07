@@ -16,4 +16,6 @@ class HistoryCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
     }
+    
+  
 }
