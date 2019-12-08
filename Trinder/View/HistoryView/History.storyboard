@@ -166,13 +166,20 @@
                                     <constraint firstAttribute="width" secondItem="ucp-Zv-mRu" secondAttribute="height" multiplier="212:145" id="TWI-8D-Dml"/>
                                 </constraints>
                             </imageView>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uNV-zf-8OT">
+                                <rect key="frame" x="0.0" y="602" width="414" height="260"/>
+                            </mapView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="uNV-zf-8OT" firstAttribute="leading" secondItem="8ls-bY-yHf" secondAttribute="leading" id="6V8-qv-5xs"/>
                             <constraint firstItem="8ls-bY-yHf" firstAttribute="trailing" secondItem="aLC-S2-z3p" secondAttribute="trailing" constant="20" id="HOc-Qh-P6t"/>
                             <constraint firstItem="8ls-bY-yHf" firstAttribute="bottom" secondItem="aLC-S2-z3p" secondAttribute="bottom" constant="529" id="JN5-Yx-wRh"/>
+                            <constraint firstItem="uNV-zf-8OT" firstAttribute="top" secondItem="ucp-Zv-mRu" secondAttribute="bottom" constant="139" id="X7m-8q-Gs3"/>
+                            <constraint firstItem="8ls-bY-yHf" firstAttribute="trailing" secondItem="uNV-zf-8OT" secondAttribute="trailing" id="blJ-sQ-RRd"/>
                             <constraint firstItem="ucp-Zv-mRu" firstAttribute="top" secondItem="aLC-S2-z3p" secondAttribute="bottom" constant="30" id="exj-EZ-324"/>
                             <constraint firstItem="ucp-Zv-mRu" firstAttribute="centerX" secondItem="H2n-YX-VkI" secondAttribute="centerX" id="oPB-jG-mnb"/>
+                            <constraint firstItem="8ls-bY-yHf" firstAttribute="bottom" secondItem="uNV-zf-8OT" secondAttribute="bottom" id="u4Y-tw-P42"/>
                             <constraint firstItem="aLC-S2-z3p" firstAttribute="leading" secondItem="8ls-bY-yHf" secondAttribute="leading" constant="20" id="wGQ-Hr-sxs"/>
                             <constraint firstItem="aLC-S2-z3p" firstAttribute="top" secondItem="8ls-bY-yHf" secondAttribute="top" constant="30" id="ziH-ug-ThU"/>
                         </constraints>
@@ -181,7 +188,9 @@
                     <navigationItem key="navigationItem" id="iSq-3f-ZUa"/>
                     <connections>
                         <outlet property="backgroundView" destination="aLC-S2-z3p" id="xaf-c1-1u4"/>
-                        <outlet property="productImageView" destination="iEr-JB-dKK" id="Chx-7R-lvD"/>
+                        <outlet property="iconTrash" destination="ucp-Zv-mRu" id="jco-t5-cdq"/>
+                        <outlet property="itemsOfSection" destination="iEr-JB-dKK" id="Chx-7R-lvD"/>
+                        <outlet property="mapView" destination="uNV-zf-8OT" id="y92-wY-VxN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GDS-oM-bu8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

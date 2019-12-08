@@ -17,9 +17,10 @@ class HistoryViewController: UIViewController {
 
     @IBOutlet weak var collectionView: UICollectionView!
     
-        
+  
         var itemsInSections: Array<Array<UIImage>> = [[#imageLiteral(resourceName: "banaba"), #imageLiteral(resourceName: "banaba"), #imageLiteral(resourceName: "wineGlass")], [#imageLiteral(resourceName: "amazonBox"), #imageLiteral(resourceName: "cornFlakesBox")], [#imageLiteral(resourceName: "wineGlass"), #imageLiteral(resourceName: "wineGlass"), #imageLiteral(resourceName: "wineGlass"), #imageLiteral(resourceName: "wineGlass"), #imageLiteral(resourceName: "wineGlass")], [#imageLiteral(resourceName: "glasses"), #imageLiteral(resourceName: "meet"), #imageLiteral(resourceName: "banaba")]]
-        var sections: Array<String> = ["Section 1", "Section 2", "Section 3", "Section 5"]
+    var iremsDictionnary = ["House Trash" : [#imageLiteral(resourceName: "banaba"), #imageLiteral(resourceName: "banaba"), #imageLiteral(resourceName: "wineGlass")], "recycle trash": [#imageLiteral(resourceName: "amazonBox"), #imageLiteral(resourceName: "cornFlakesBox")], "glass trash": [#imageLiteral(resourceName: "wineGlass"), #imageLiteral(resourceName: "wineGlass"), #imageLiteral(resourceName: "wineGlass"), #imageLiteral(resourceName: "wineGlass"), #imageLiteral(resourceName: "wineGlass")], "dechetery": [#imageLiteral(resourceName: "glasses"), #imageLiteral(resourceName: "meet"), #imageLiteral(resourceName: "banaba")] ]
+        var sections: Array<String> = ["House trash", "recycle trash", "glass trash", "dechetery"]
         var iconTrash: [UIImage] = [#imageLiteral(resourceName: "trashBrown"), #imageLiteral(resourceName: "trashYellow"), #imageLiteral(resourceName: "trashGreen"), #imageLiteral(resourceName: "traskTruck")]
  
         
@@ -30,13 +31,14 @@ class HistoryViewController: UIViewController {
             self.collectionView.delegate = self
         }
     
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//
-//        if segue.identifier == "Segue" {
-//
-//        }
-//
-//    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+
+        if let dest = segue.destination as? HistoryDetailViewController, let index = collectionView.indexPathsForSelectedItems?.first {
+            dest.itemsOfSection = itemsInSections[index.section][index.row]
+            print("Segue prepare")
+        }
+
+    }
     
 }
 extension HistoryViewController: UICollectionViewDelegate, UICollectionViewDataSource {
@@ -68,14 +70,14 @@ extension HistoryViewController: UICollectionViewDelegate, UICollectionViewDataS
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let item = itemsInSections[indexPath.section]
-        performSegue(withIdentifier: "Segue", sender: self)
-        
-       
+        let selectedCell = collectionView.cellForItem(at: indexPath)
+        performSegue(withIdentifier: "Segue", sender: selectedCell)
+        print("segue performe")
         
     
     }
     
+ 
     
 
 }
