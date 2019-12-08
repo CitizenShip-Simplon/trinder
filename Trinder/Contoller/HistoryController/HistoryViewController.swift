@@ -14,31 +14,30 @@ class HistoryViewController: UIViewController {
 
     @IBOutlet weak var collectionView: UICollectionView!
     
-  
-        var itemsInSections: Array<Array<UIImage>> = [[#imageLiteral(resourceName: "meet"), #imageLiteral(resourceName: "banaba"), #imageLiteral(resourceName: "ananas")], [#imageLiteral(resourceName: "amazonBox"), #imageLiteral(resourceName: "canOfCoke"), #imageLiteral(resourceName: "paper"), #imageLiteral(resourceName: "cornFlakesBox")], [#imageLiteral(resourceName: "wineGlass"), #imageLiteral(resourceName: "bottleOfWine"), #imageLiteral(resourceName: "shotGlasses")], [#imageLiteral(resourceName: "painting"), #imageLiteral(resourceName: "alarmClock"), #imageLiteral(resourceName: "mirror")]]
-        var sections: Array<String> = ["House trash", "recycle trash", "glass trash", "dechetery"]
-        var iconTrash: [UIImage] = [#imageLiteral(resourceName: "trashBrown"), #imageLiteral(resourceName: "trashYellow"), #imageLiteral(resourceName: "trashGreen"), #imageLiteral(resourceName: "traskTruck")]
-  
-        
-        
-        override func viewDidLoad() {
-            super.viewDidLoad()
-            self.collectionView.dataSource = self
-            self.collectionView.delegate = self
-        }
+    var itemsInSections: Array<Array<UIImage>> = [[#imageLiteral(resourceName: "meet"), #imageLiteral(resourceName: "banaba"), #imageLiteral(resourceName: "ananas")], [#imageLiteral(resourceName: "amazonBox"), #imageLiteral(resourceName: "canOfCoke"), #imageLiteral(resourceName: "paper"), #imageLiteral(resourceName: "cornFlakesBox")], [#imageLiteral(resourceName: "wineGlass"), #imageLiteral(resourceName: "bottleOfWine"), #imageLiteral(resourceName: "shotGlasses")], [#imageLiteral(resourceName: "painting"), #imageLiteral(resourceName: "alarmClock"), #imageLiteral(resourceName: "mirror")]]
+    var sections: Array<String> = ["House trash", "recycle trash", "glass trash", "dechetery"]
+    var iconTrash: [UIImage] = [#imageLiteral(resourceName: "trashBrown"), #imageLiteral(resourceName: "trashYellow"), #imageLiteral(resourceName: "trashGreen"), #imageLiteral(resourceName: "traskTruck")]
+
+
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.collectionView.dataSource = self
+        self.collectionView.delegate = self
+    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 
         if segue.identifier == "Segue" {
-            print("@@@@@&@@@@@@@@@@@@@@@@@")
-            }
+            
+        }
            
-            }
-        
-
-    
-    
+    }
+   
 }
+
+// MARK:- collectionView's methods
+
 extension HistoryViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
@@ -47,7 +46,6 @@ extension HistoryViewController: UICollectionViewDelegate, UICollectionViewDataS
         headerView.titleSectionLabel.text = sections[indexPath.section]
         headerView.iconTrash.image = iconTrash[indexPath.section]
         return headerView
-   
     }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -62,8 +60,7 @@ extension HistoryViewController: UICollectionViewDelegate, UICollectionViewDataS
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! HistoryCell
         let image = self.itemsInSections[indexPath.section][indexPath.row]
         cell.mainImageView.image = image
-     
-        
+       
         return cell
     }
     
@@ -74,9 +71,6 @@ extension HistoryViewController: UICollectionViewDelegate, UICollectionViewDataS
         
     
     }
-    
- 
-    
 
 }
 
@@ -103,6 +97,3 @@ extension HistoryViewController: UICollectionViewDelegate, UICollectionViewDataS
 
 
 
-//        func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-//            return self.sections[section]
-//        }

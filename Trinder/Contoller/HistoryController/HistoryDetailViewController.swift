@@ -17,9 +17,9 @@ class HistoryDetailViewController: UIViewController, MKMapViewDelegate, CLLocati
     @IBOutlet var itemsOfSection: UIImageView!
     @IBOutlet var backgroundView: UIView!
     @IBOutlet var iconTrash: UIImageView!
+    @IBOutlet weak var descriptionLabel: UILabel!
     
-    var image: [UIImage]!
-    var selectedImage: String!
+    var imagePassed = UIImage()
     
     var decheteriesCollection = DecheteryCollection()
     let regionInMeters: Double = 10000
@@ -31,38 +31,47 @@ class HistoryDetailViewController: UIViewController, MKMapViewDelegate, CLLocati
         super.viewDidLoad()
         setupImageView()
         addShadow()
+        animateIcon()
         createAnnotations(locations: decheteriesCollection.dechetteriesLocations)
         checkLocationService()
-      
+    }
+       
+    private func setupImageView() {
+//        itemsOfSection.image = imagePassed
+    }
+
+    private func addShadow() {
+        guard let view = backgroundView else { return }
+        view.layer.shadowColor = UIColor.black.cgColor
+        view.layer.shadowRadius = 2.0
+        view.layer.shadowOffset = CGSize(width: 2.0, height: 2.0)
+        view.layer.shadowOpacity = 0.5
     }
     
-
-    
-    private func setupImageView() {
-        
+    func animateIcon() {
+        UIView.animate(withDuration: 0.2, animations:  {
+            self.iconTrash.frame.size.width += 10
+            self.iconTrash.frame.size.height += 10
+        }) { _ in
+            UIView.animate(withDuration: 1, delay: 0.25, options: [.autoreverse, .repeat], animations: {
+                self.iconTrash.frame.origin.y -= 10
+            })
         }
-
-    
-        private func addShadow() {
-            guard let view = backgroundView else { return }
-            view.layer.shadowColor = UIColor.black.cgColor
-            view.layer.shadowRadius = 2.0
-            view.layer.shadowOffset = CGSize(width: 2.0, height: 2.0)
-            view.layer.shadowOpacity = 0.5
-//            view.layer.cornerRadius = 10
-        }
+    }
         
 
 
     
+// MARK:- map's methods
     
     func createAnnotations(locations:[[String : Any]]) {
         for locations in locations {
             let annotations = MKPointAnnotation()
             annotations.title = locations["name"] as? String
             annotations.coordinate = CLLocationCoordinate2D(latitude: locations["latitude"] as! CLLocationDegrees, longitude: locations["longitude"] as! CLLocationDegrees)
-            
+          
             mapView.addAnnotation(annotations)
+          
         }
     }
     
@@ -72,19 +81,7 @@ class HistoryDetailViewController: UIViewController, MKMapViewDelegate, CLLocati
             mapView.setRegion(region, animated: true)
         }
     }
-    
-    // Two methodes for the user location
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        guard let location = locations.last else { return }
-        let center = CLLocationCoordinate2D(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
-        let region = MKCoordinateRegion(center: center, latitudinalMeters: regionInMeters, longitudinalMeters: regionInMeters)
-        mapView.setRegion(region, animated: true)
-    }
-    
-    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
-        checkLocationAuthorization()
-    }
-    
+ 
     func checkLocationService() {
         if CLLocationManager.locationServicesEnabled() {
             setupLocationManager()
