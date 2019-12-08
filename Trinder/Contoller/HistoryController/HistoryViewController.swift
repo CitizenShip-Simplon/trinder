@@ -9,20 +9,16 @@
 import UIKit
 
 
-struct Item {
-    var imageName: String
-}
 
 class HistoryViewController: UIViewController {
 
     @IBOutlet weak var collectionView: UICollectionView!
     
   
-        var itemsInSections: Array<Array<UIImage>> = [[#imageLiteral(resourceName: "banaba"), #imageLiteral(resourceName: "banaba"), #imageLiteral(resourceName: "wineGlass")], [#imageLiteral(resourceName: "amazonBox"), #imageLiteral(resourceName: "cornFlakesBox")], [#imageLiteral(resourceName: "wineGlass"), #imageLiteral(resourceName: "wineGlass"), #imageLiteral(resourceName: "wineGlass"), #imageLiteral(resourceName: "wineGlass"), #imageLiteral(resourceName: "wineGlass")], [#imageLiteral(resourceName: "glasses"), #imageLiteral(resourceName: "meet"), #imageLiteral(resourceName: "banaba")]]
-    var iremsDictionnary = ["House Trash" : [#imageLiteral(resourceName: "banaba"), #imageLiteral(resourceName: "banaba"), #imageLiteral(resourceName: "wineGlass")], "recycle trash": [#imageLiteral(resourceName: "amazonBox"), #imageLiteral(resourceName: "cornFlakesBox")], "glass trash": [#imageLiteral(resourceName: "wineGlass"), #imageLiteral(resourceName: "wineGlass"), #imageLiteral(resourceName: "wineGlass"), #imageLiteral(resourceName: "wineGlass"), #imageLiteral(resourceName: "wineGlass")], "dechetery": [#imageLiteral(resourceName: "glasses"), #imageLiteral(resourceName: "meet"), #imageLiteral(resourceName: "banaba")] ]
+        var itemsInSections: Array<Array<UIImage>> = [[#imageLiteral(resourceName: "meet"), #imageLiteral(resourceName: "banaba"), #imageLiteral(resourceName: "ananas")], [#imageLiteral(resourceName: "amazonBox"), #imageLiteral(resourceName: "canOfCoke"), #imageLiteral(resourceName: "paper"), #imageLiteral(resourceName: "cornFlakesBox")], [#imageLiteral(resourceName: "wineGlass"), #imageLiteral(resourceName: "bottleOfWine"), #imageLiteral(resourceName: "shotGlasses")], [#imageLiteral(resourceName: "painting"), #imageLiteral(resourceName: "alarmClock"), #imageLiteral(resourceName: "mirror")]]
         var sections: Array<String> = ["House trash", "recycle trash", "glass trash", "dechetery"]
         var iconTrash: [UIImage] = [#imageLiteral(resourceName: "trashBrown"), #imageLiteral(resourceName: "trashYellow"), #imageLiteral(resourceName: "trashGreen"), #imageLiteral(resourceName: "traskTruck")]
- 
+  
         
         
         override func viewDidLoad() {
@@ -33,12 +29,14 @@ class HistoryViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 
-        if let dest = segue.destination as? HistoryDetailViewController, let index = collectionView.indexPathsForSelectedItems?.first {
-            dest.itemsOfSection = itemsInSections[index.section][index.row]
-            print("Segue prepare")
-        }
+        if segue.identifier == "Segue" {
+            print("@@@@@&@@@@@@@@@@@@@@@@@")
+            }
+           
+            }
+        
 
-    }
+    
     
 }
 extension HistoryViewController: UICollectionViewDelegate, UICollectionViewDataSource {
@@ -70,7 +68,7 @@ extension HistoryViewController: UICollectionViewDelegate, UICollectionViewDataS
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let selectedCell = collectionView.cellForItem(at: indexPath)
+        let selectedCell = itemsInSections[indexPath.item]
         performSegue(withIdentifier: "Segue", sender: selectedCell)
         print("segue performe")
         
