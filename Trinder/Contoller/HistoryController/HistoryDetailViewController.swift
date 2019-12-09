@@ -17,9 +17,9 @@ class HistoryDetailViewController: UIViewController, MKMapViewDelegate, CLLocati
     @IBOutlet var itemsOfSection: UIImageView!
     @IBOutlet var backgroundView: UIView!
     @IBOutlet var iconTrash: UIImageView!
-    @IBOutlet weak var descriptionLabel: UILabel!
     
     var imagePassed = UIImage()
+    var iconTrashPassed = UIImage()
     
     var decheteriesCollection = DecheteryCollection()
     let regionInMeters: Double = 10000
@@ -37,7 +37,8 @@ class HistoryDetailViewController: UIViewController, MKMapViewDelegate, CLLocati
     }
        
     private func setupImageView() {
-//        itemsOfSection.image = imagePassed
+        itemsOfSection.image = imagePassed
+//        iconTrash.image = iconTrashPassed
     }
 
     private func addShadow() {
@@ -65,10 +66,12 @@ class HistoryDetailViewController: UIViewController, MKMapViewDelegate, CLLocati
 // MARK:- map's methods
     
     func createAnnotations(locations:[[String : Any]]) {
+
         for locations in locations {
             let annotations = MKPointAnnotation()
             annotations.title = locations["name"] as? String
             annotations.coordinate = CLLocationCoordinate2D(latitude: locations["latitude"] as! CLLocationDegrees, longitude: locations["longitude"] as! CLLocationDegrees)
+            annotations.subtitle = locations["description"] as? String
           
             mapView.addAnnotation(annotations)
           
@@ -97,6 +100,7 @@ class HistoryDetailViewController: UIViewController, MKMapViewDelegate, CLLocati
     }
     
     func checkLocationAuthorization() {
+        
         switch CLLocationManager.authorizationStatus() {
         /// When the app is open
         case .authorizedWhenInUse:

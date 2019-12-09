@@ -10,6 +10,5 @@ import UIKit
 
 class HistoryReusableView: UICollectionReusableView {
     @IBOutlet weak var titleSectionLabel: UILabel!
-    @IBOutlet weak var colorView: UIView!
     @IBOutlet weak var iconTrash: UIImageView!
 }

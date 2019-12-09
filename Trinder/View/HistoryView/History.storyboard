@@ -131,10 +131,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aLC-S2-z3p">
-                                <rect key="frame" x="0.0" y="118" width="414" height="215"/>
+                                <rect key="frame" x="0.0" y="118" width="414" height="160"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="PCV-Zk-c7Q">
-                                        <rect key="frame" x="5" y="5" width="404" height="205"/>
+                                        <rect key="frame" x="5" y="5" width="404" height="150"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="painting" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iEr-JB-dKK" userLabel="imageProduct">
                                                 <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
@@ -172,24 +172,23 @@
                                 </constraints>
                             </view>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="traskTruck" translatesAutoresizingMaskIntoConstraints="NO" id="ucp-Zv-mRu" userLabel="iconTrash">
-                                <rect key="frame" x="134" y="353" width="146" height="100"/>
+                                <rect key="frame" x="134" y="290" width="146" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="G3q-XZ-SMb"/>
                                     <constraint firstAttribute="width" secondItem="ucp-Zv-mRu" secondAttribute="height" multiplier="212:145" id="TWI-8D-Dml"/>
                                 </constraints>
                             </imageView>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="uNV-zf-8OT">
-                                <rect key="frame" x="0.0" y="483" width="414" height="379"/>
+                                <rect key="frame" x="0.0" y="402" width="414" height="460"/>
                             </mapView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="uNV-zf-8OT" firstAttribute="top" secondItem="ucp-Zv-mRu" secondAttribute="bottom" constant="12" id="1sB-gT-b0G"/>
                             <constraint firstItem="uNV-zf-8OT" firstAttribute="leading" secondItem="8ls-bY-yHf" secondAttribute="leading" id="6V8-qv-5xs"/>
+                            <constraint firstItem="ucp-Zv-mRu" firstAttribute="top" secondItem="aLC-S2-z3p" secondAttribute="bottom" constant="12" id="75K-m0-HBl"/>
                             <constraint firstItem="8ls-bY-yHf" firstAttribute="trailing" secondItem="aLC-S2-z3p" secondAttribute="trailing" id="HOc-Qh-P6t"/>
-                            <constraint firstItem="8ls-bY-yHf" firstAttribute="bottom" secondItem="aLC-S2-z3p" secondAttribute="bottom" constant="529" id="JN5-Yx-wRh"/>
-                            <constraint firstItem="uNV-zf-8OT" firstAttribute="top" secondItem="ucp-Zv-mRu" secondAttribute="bottom" constant="30" id="X7m-8q-Gs3"/>
                             <constraint firstItem="8ls-bY-yHf" firstAttribute="trailing" secondItem="uNV-zf-8OT" secondAttribute="trailing" id="blJ-sQ-RRd"/>
-                            <constraint firstItem="ucp-Zv-mRu" firstAttribute="top" secondItem="aLC-S2-z3p" secondAttribute="bottom" constant="20" id="exj-EZ-324"/>
                             <constraint firstItem="ucp-Zv-mRu" firstAttribute="centerX" secondItem="H2n-YX-VkI" secondAttribute="centerX" id="oPB-jG-mnb"/>
                             <constraint firstItem="8ls-bY-yHf" firstAttribute="bottom" secondItem="uNV-zf-8OT" secondAttribute="bottom" id="u4Y-tw-P42"/>
                             <constraint firstItem="aLC-S2-z3p" firstAttribute="leading" secondItem="8ls-bY-yHf" secondAttribute="leading" id="wGQ-Hr-sxs"/>
