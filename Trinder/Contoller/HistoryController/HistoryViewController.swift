@@ -12,6 +12,7 @@ class HistoryViewController: UIViewController {
 
     @IBOutlet weak var collectionView: UICollectionView!
  
+    // select and Change if needed:
     var itemsInSections: Array<Array<UIImage>> = [[#imageLiteral(resourceName: "meet"), #imageLiteral(resourceName: "banaba"), #imageLiteral(resourceName: "ananas")], [#imageLiteral(resourceName: "amazonBox"), #imageLiteral(resourceName: "canOfCoke"), #imageLiteral(resourceName: "paper"), #imageLiteral(resourceName: "cornFlakesBox")], [#imageLiteral(resourceName: "wineGlass"), #imageLiteral(resourceName: "bottleOfWine"), #imageLiteral(resourceName: "shotGlasses")], [#imageLiteral(resourceName: "painting"), #imageLiteral(resourceName: "alarmClock"), #imageLiteral(resourceName: "mirror")]]
  
     var sections: Array<String> = ["House trash", "recycle trash", "glass trash", "dechetery"]
