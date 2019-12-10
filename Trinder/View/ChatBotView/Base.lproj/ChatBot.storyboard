@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="PYx-CU-tM4">
-    <device id="retina6_5" orientation="portrait" appearance="light"/>
+    <device id="retina3_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -12,67 +12,73 @@
             <objects>
                 <viewController id="PYx-CU-tM4" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jHU-he-zaT">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="sk1-Sd-imr">
-                                <rect key="frame" x="197" y="244" width="20" height="20"/>
+                                <rect key="frame" x="150" y="298" width="20" height="20"/>
                             </activityIndicatorView>
-                            <searchBar contentMode="redraw" fixedFrame="YES" text="bouteille" translatesAutoresizingMaskIntoConstraints="NO" id="WL9-Dp-cDv">
-                                <rect key="frame" x="0.0" y="134" width="414" height="56"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </searchBar>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Que souhaite tu recycler aujourd'hui?" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VtD-TM-jXS">
-                                <rect key="frame" x="81" y="74" width="268" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Que souhaite tu recycler aujourd'hui?" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VtD-TM-jXS">
+                                <rect key="frame" x="26" y="8" width="268" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="268" id="Sde-53-PsX"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" spacing="91" translatesAutoresizingMaskIntoConstraints="NO" id="0Ek-rh-lm0" userLabel="Stack View POUBELLE">
-                                <rect key="frame" x="20" y="649" width="566" height="128"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="71" translatesAutoresizingMaskIntoConstraints="NO" id="0Ek-rh-lm0" userLabel="Stack View POUBELLE">
+                                <rect key="frame" x="-7" y="208" width="334" height="64"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TrashGreen" translatesAutoresizingMaskIntoConstraints="NO" id="01I-RA-Ulv" userLabel="poubelle verte">
-                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="64" height="64"/>
                                     </imageView>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TrashWhite" translatesAutoresizingMaskIntoConstraints="NO" id="MVL-ht-jRD" userLabel="poubelle blanche">
-                                        <rect key="frame" x="219" y="0.0" width="128" height="128"/>
+                                        <rect key="frame" x="135" y="0.0" width="64" height="64"/>
                                     </imageView>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TrashYellow" translatesAutoresizingMaskIntoConstraints="NO" id="rfz-T2-5j9" userLabel="poubelle jaune">
-                                        <rect key="frame" x="438" y="0.0" width="128" height="128"/>
+                                        <rect key="frame" x="270" y="0.0" width="64" height="64"/>
                                     </imageView>
                                 </subviews>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="44" translatesAutoresizingMaskIntoConstraints="NO" id="HkY-NV-UKq">
-                                <rect key="frame" x="9" y="431" width="396" height="34"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" distribution="fillProportionally" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="HkY-NV-UKq">
+                                <rect key="frame" x="0.0" y="358" width="320" height="34"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="elle est en verre" borderStyle="roundedRect" textAlignment="center" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qww-HO-Y2V">
-                                        <rect key="frame" x="0.0" y="0.0" width="156.33333333333334" height="34"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="131" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="elle est en plastique" borderStyle="roundedRect" textAlignment="center" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mvV-in-Pxw">
-                                        <rect key="frame" x="200.33333333333337" y="0.0" width="195.66666666666663" height="34"/>
+                                        <rect key="frame" x="163" y="0.0" width="157" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                 </subviews>
                             </stackView>
+                            <searchBar contentMode="redraw" text="bouteille" translatesAutoresizingMaskIntoConstraints="NO" id="WL9-Dp-cDv">
+                                <rect key="frame" x="20" y="58" width="186" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="sk1-Sd-imr" firstAttribute="centerX" secondItem="jHU-he-zaT" secondAttribute="centerX" id="5F6-Qw-YsI"/>
-                            <constraint firstItem="rvh-Yv-oq8" firstAttribute="trailing" secondItem="HkY-NV-UKq" secondAttribute="trailing" constant="9" id="OID-O3-HB4"/>
-                            <constraint firstItem="HkY-NV-UKq" firstAttribute="centerY" secondItem="jHU-he-zaT" secondAttribute="centerY" id="UBR-ck-ul8"/>
-                            <constraint firstItem="HkY-NV-UKq" firstAttribute="leading" secondItem="rvh-Yv-oq8" secondAttribute="leading" constant="9" id="gsn-6p-MGe"/>
-                            <constraint firstItem="HkY-NV-UKq" firstAttribute="centerX" secondItem="jHU-he-zaT" secondAttribute="centerX" id="ni6-G3-at0"/>
+                            <constraint firstItem="WL9-Dp-cDv" firstAttribute="top" secondItem="VtD-TM-jXS" secondAttribute="bottom" constant="16" id="0Vc-9W-BzS"/>
+                            <constraint firstItem="0Ek-rh-lm0" firstAttribute="centerY" secondItem="jHU-he-zaT" secondAttribute="centerY" id="1mw-p6-sdL"/>
+                            <constraint firstItem="sk1-Sd-imr" firstAttribute="centerX" secondItem="jHU-he-zaT" secondAttribute="centerX" id="4Tu-5w-6zM"/>
+                            <constraint firstItem="HkY-NV-UKq" firstAttribute="centerX" secondItem="jHU-he-zaT" secondAttribute="centerX" id="CZD-aW-5gF"/>
+                            <constraint firstItem="rvh-Yv-oq8" firstAttribute="trailing" secondItem="WL9-Dp-cDv" secondAttribute="trailing" constant="20" id="L6q-qK-z28"/>
+                            <constraint firstItem="0Ek-rh-lm0" firstAttribute="centerX" secondItem="jHU-he-zaT" secondAttribute="centerX" id="RGs-x1-UC3"/>
+                            <constraint firstItem="VtD-TM-jXS" firstAttribute="top" secondItem="rvh-Yv-oq8" secondAttribute="top" constant="8" id="han-fT-hPt"/>
+                            <constraint firstItem="WL9-Dp-cDv" firstAttribute="leading" secondItem="rvh-Yv-oq8" secondAttribute="leading" constant="20" id="lHz-0L-4Wk"/>
+                            <constraint firstItem="VtD-TM-jXS" firstAttribute="centerX" secondItem="jHU-he-zaT" secondAttribute="centerX" id="xTT-Ws-RWK"/>
+                            <constraint firstItem="HkY-NV-UKq" firstAttribute="top" secondItem="sk1-Sd-imr" secondAttribute="bottom" constant="40" id="zaP-6N-EM0"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="rvh-Yv-oq8"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="72s-93-m16" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-688.40579710144937" y="1709.5982142857142"/>
+            <point key="canvasLocation" x="-690" y="1708.75"/>
         </scene>
         <!--ChatBotSearch-->
         <scene sceneID="Unn-hY-SKD">
