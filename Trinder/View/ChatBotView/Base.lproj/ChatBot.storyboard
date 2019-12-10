@@ -30,16 +30,16 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" spacing="91" translatesAutoresizingMaskIntoConstraints="NO" id="0Ek-rh-lm0" userLabel="Stack View POUBELLE">
-                                <rect key="frame" x="20" y="649" width="374" height="64"/>
+                                <rect key="frame" x="20" y="649" width="566" height="128"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TrashGreen" translatesAutoresizingMaskIntoConstraints="NO" id="01I-RA-Ulv" userLabel="poubelle verte">
-                                        <rect key="frame" x="0.0" y="0.0" width="64" height="64"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
                                     </imageView>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TrashWhite" translatesAutoresizingMaskIntoConstraints="NO" id="MVL-ht-jRD" userLabel="poubelle blanche">
-                                        <rect key="frame" x="155" y="0.0" width="64" height="64"/>
+                                        <rect key="frame" x="219" y="0.0" width="128" height="128"/>
                                     </imageView>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TrashYellow" translatesAutoresizingMaskIntoConstraints="NO" id="rfz-T2-5j9" userLabel="poubelle jaune">
-                                        <rect key="frame" x="310" y="0.0" width="64" height="64"/>
+                                        <rect key="frame" x="438" y="0.0" width="128" height="128"/>
                                     </imageView>
                                 </subviews>
                             </stackView>
