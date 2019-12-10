@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="PYx-CU-tM4">
-    <device id="retina3_5" orientation="portrait" appearance="light"/>
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -12,14 +12,11 @@
             <objects>
                 <viewController id="PYx-CU-tM4" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jHU-he-zaT">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="sk1-Sd-imr">
-                                <rect key="frame" x="150" y="298" width="20" height="20"/>
-                            </activityIndicatorView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Que souhaite tu recycler aujourd'hui?" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VtD-TM-jXS">
-                                <rect key="frame" x="26" y="8" width="268" height="34"/>
+                                <rect key="frame" x="73" y="52" width="268" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="268" id="Sde-53-PsX"/>
                                 </constraints>
@@ -27,7 +24,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="71" translatesAutoresizingMaskIntoConstraints="NO" id="0Ek-rh-lm0" userLabel="Stack View POUBELLE">
-                                <rect key="frame" x="-7" y="208" width="334" height="64"/>
+                                <rect key="frame" x="40" y="416" width="334" height="64"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TrashGreen" translatesAutoresizingMaskIntoConstraints="NO" id="01I-RA-Ulv" userLabel="poubelle verte">
                                         <rect key="frame" x="0.0" y="0.0" width="64" height="64"/>
@@ -40,8 +37,8 @@
                                     </imageView>
                                 </subviews>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" distribution="fillProportionally" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="HkY-NV-UKq">
-                                <rect key="frame" x="0.0" y="358" width="320" height="34"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="HkY-NV-UKq">
+                                <rect key="frame" x="47" y="210" width="320" height="34"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="elle est en verre" borderStyle="roundedRect" textAlignment="center" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qww-HO-Y2V">
                                         <rect key="frame" x="0.0" y="0.0" width="131" height="34"/>
@@ -56,9 +53,12 @@
                                 </subviews>
                             </stackView>
                             <searchBar contentMode="redraw" text="bouteille" translatesAutoresizingMaskIntoConstraints="NO" id="WL9-Dp-cDv">
-                                <rect key="frame" x="20" y="58" width="186" height="56"/>
+                                <rect key="frame" x="20" y="102" width="374" height="56"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="sk1-Sd-imr">
+                                <rect key="frame" x="197" y="174" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -68,10 +68,11 @@
                             <constraint firstItem="HkY-NV-UKq" firstAttribute="centerX" secondItem="jHU-he-zaT" secondAttribute="centerX" id="CZD-aW-5gF"/>
                             <constraint firstItem="rvh-Yv-oq8" firstAttribute="trailing" secondItem="WL9-Dp-cDv" secondAttribute="trailing" constant="20" id="L6q-qK-z28"/>
                             <constraint firstItem="0Ek-rh-lm0" firstAttribute="centerX" secondItem="jHU-he-zaT" secondAttribute="centerX" id="RGs-x1-UC3"/>
+                            <constraint firstItem="HkY-NV-UKq" firstAttribute="top" secondItem="sk1-Sd-imr" secondAttribute="bottom" constant="16" id="TQx-07-z5q"/>
                             <constraint firstItem="VtD-TM-jXS" firstAttribute="top" secondItem="rvh-Yv-oq8" secondAttribute="top" constant="8" id="han-fT-hPt"/>
                             <constraint firstItem="WL9-Dp-cDv" firstAttribute="leading" secondItem="rvh-Yv-oq8" secondAttribute="leading" constant="20" id="lHz-0L-4Wk"/>
+                            <constraint firstItem="sk1-Sd-imr" firstAttribute="top" secondItem="WL9-Dp-cDv" secondAttribute="bottom" constant="16" id="pMc-kL-cLm"/>
                             <constraint firstItem="VtD-TM-jXS" firstAttribute="centerX" secondItem="jHU-he-zaT" secondAttribute="centerX" id="xTT-Ws-RWK"/>
-                            <constraint firstItem="HkY-NV-UKq" firstAttribute="top" secondItem="sk1-Sd-imr" secondAttribute="bottom" constant="40" id="zaP-6N-EM0"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="rvh-Yv-oq8"/>
                     </view>
