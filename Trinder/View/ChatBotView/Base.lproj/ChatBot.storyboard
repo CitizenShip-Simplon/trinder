@@ -15,71 +15,64 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Que souhaite tu recycler aujourd'hui?" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VtD-TM-jXS">
-                                <rect key="frame" x="73" y="52" width="268" height="34"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="268" id="Sde-53-PsX"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="71" translatesAutoresizingMaskIntoConstraints="NO" id="0Ek-rh-lm0" userLabel="Stack View POUBELLE">
-                                <rect key="frame" x="40" y="416" width="334" height="64"/>
-                                <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TrashGreen" translatesAutoresizingMaskIntoConstraints="NO" id="01I-RA-Ulv" userLabel="poubelle verte">
-                                        <rect key="frame" x="0.0" y="0.0" width="64" height="64"/>
-                                    </imageView>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TrashWhite" translatesAutoresizingMaskIntoConstraints="NO" id="MVL-ht-jRD" userLabel="poubelle blanche">
-                                        <rect key="frame" x="135" y="0.0" width="64" height="64"/>
-                                    </imageView>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TrashYellow" translatesAutoresizingMaskIntoConstraints="NO" id="rfz-T2-5j9" userLabel="poubelle jaune">
-                                        <rect key="frame" x="270" y="0.0" width="64" height="64"/>
-                                    </imageView>
-                                </subviews>
-                            </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="HkY-NV-UKq">
-                                <rect key="frame" x="47" y="210" width="320" height="34"/>
-                                <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="elle est en verre" borderStyle="roundedRect" textAlignment="center" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qww-HO-Y2V">
-                                        <rect key="frame" x="0.0" y="0.0" width="131" height="34"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="elle est en plastique" borderStyle="roundedRect" textAlignment="center" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mvV-in-Pxw">
-                                        <rect key="frame" x="163" y="0.0" width="157" height="34"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                </subviews>
-                            </stackView>
-                            <searchBar contentMode="redraw" text="bouteille" translatesAutoresizingMaskIntoConstraints="NO" id="WL9-Dp-cDv">
-                                <rect key="frame" x="20" y="102" width="374" height="56"/>
+                            <searchBar contentMode="redraw" searchBarStyle="minimal" text="bouteille" translatesAutoresizingMaskIntoConstraints="NO" id="WL9-Dp-cDv">
+                                <rect key="frame" x="20" y="245.33333333333337" width="374" height="56"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="sk1-Sd-imr">
-                                <rect key="frame" x="197" y="174" width="20" height="20"/>
-                            </activityIndicatorView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Que souhaites-tu recycler aujourd'hui?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yS2-Fd-GA8">
+                                <rect key="frame" x="65" y="52" width="284" height="71"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="284" id="PzZ-2X-bKt"/>
+                                    <constraint firstAttribute="height" constant="71" id="t4P-VX-92k"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                <color key="textColor" red="0.049148997304783705" green="0.50502562916999805" blue="0.98328930139541626" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Elle est en verre?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aVv-Ix-SZI">
+                                <rect key="frame" x="109.66666666666669" y="432" width="195" height="32"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                <color key="textColor" red="0.049148997299999997" green="0.50502562920000005" blue="0.98328930140000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Elle est en plastique?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n7e-NZ-eru">
+                                <rect key="frame" x="85.666666666666686" y="353.33333333333331" width="243" height="32"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                <color key="textColor" red="0.049148997299999997" green="0.50502562920000005" blue="0.98328930140000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="trash" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="4St-mx-rNS">
+                                <rect key="frame" x="44" y="542.66666666666674" width="326" height="169"/>
+                                <color key="tintColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="326" id="1Jn-Go-EPa"/>
+                                    <constraint firstAttribute="height" constant="168.66999999999999" id="84r-2r-sbb"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="WL9-Dp-cDv" firstAttribute="top" secondItem="VtD-TM-jXS" secondAttribute="bottom" constant="16" id="0Vc-9W-BzS"/>
-                            <constraint firstItem="0Ek-rh-lm0" firstAttribute="centerY" secondItem="jHU-he-zaT" secondAttribute="centerY" id="1mw-p6-sdL"/>
-                            <constraint firstItem="sk1-Sd-imr" firstAttribute="centerX" secondItem="jHU-he-zaT" secondAttribute="centerX" id="4Tu-5w-6zM"/>
-                            <constraint firstItem="HkY-NV-UKq" firstAttribute="centerX" secondItem="jHU-he-zaT" secondAttribute="centerX" id="CZD-aW-5gF"/>
-                            <constraint firstItem="rvh-Yv-oq8" firstAttribute="trailing" secondItem="WL9-Dp-cDv" secondAttribute="trailing" constant="20" id="L6q-qK-z28"/>
-                            <constraint firstItem="0Ek-rh-lm0" firstAttribute="centerX" secondItem="jHU-he-zaT" secondAttribute="centerX" id="RGs-x1-UC3"/>
-                            <constraint firstItem="HkY-NV-UKq" firstAttribute="top" secondItem="sk1-Sd-imr" secondAttribute="bottom" constant="16" id="TQx-07-z5q"/>
-                            <constraint firstItem="VtD-TM-jXS" firstAttribute="top" secondItem="rvh-Yv-oq8" secondAttribute="top" constant="8" id="han-fT-hPt"/>
-                            <constraint firstItem="WL9-Dp-cDv" firstAttribute="leading" secondItem="rvh-Yv-oq8" secondAttribute="leading" constant="20" id="lHz-0L-4Wk"/>
-                            <constraint firstItem="sk1-Sd-imr" firstAttribute="top" secondItem="WL9-Dp-cDv" secondAttribute="bottom" constant="16" id="pMc-kL-cLm"/>
-                            <constraint firstItem="VtD-TM-jXS" firstAttribute="centerX" secondItem="jHU-he-zaT" secondAttribute="centerX" id="xTT-Ws-RWK"/>
+                            <constraint firstItem="WL9-Dp-cDv" firstAttribute="centerX" secondItem="jHU-he-zaT" secondAttribute="centerX" id="3iC-5O-ujr"/>
+                            <constraint firstItem="4St-mx-rNS" firstAttribute="centerX" secondItem="jHU-he-zaT" secondAttribute="centerX" id="5sy-c2-R2T"/>
+                            <constraint firstItem="yS2-Fd-GA8" firstAttribute="centerX" secondItem="jHU-he-zaT" secondAttribute="centerX" id="99F-1I-fdV"/>
+                            <constraint firstItem="rvh-Yv-oq8" firstAttribute="trailing" secondItem="WL9-Dp-cDv" secondAttribute="trailing" constant="20" id="E8b-d8-ghV"/>
+                            <constraint firstItem="n7e-NZ-eru" firstAttribute="centerX" secondItem="jHU-he-zaT" secondAttribute="centerX" id="Jfp-Yk-0I7"/>
+                            <constraint firstItem="aVv-Ix-SZI" firstAttribute="centerY" secondItem="jHU-he-zaT" secondAttribute="centerY" id="Jhi-A9-Syq"/>
+                            <constraint firstItem="aVv-Ix-SZI" firstAttribute="centerX" secondItem="jHU-he-zaT" secondAttribute="centerX" id="Lg6-gE-BGa"/>
+                            <constraint firstItem="4St-mx-rNS" firstAttribute="centerX" secondItem="jHU-he-zaT" secondAttribute="centerX" id="MZO-Sm-KvM"/>
+                            <constraint firstItem="n7e-NZ-eru" firstAttribute="top" secondItem="WL9-Dp-cDv" secondAttribute="bottom" constant="52" id="ZQM-R0-0jy"/>
+                            <constraint firstItem="WL9-Dp-cDv" firstAttribute="leading" secondItem="rvh-Yv-oq8" secondAttribute="leading" constant="20" id="ir6-Au-XSD"/>
+                            <constraint firstItem="yS2-Fd-GA8" firstAttribute="top" secondItem="rvh-Yv-oq8" secondAttribute="top" constant="8" id="kMb-4X-QDX"/>
+                            <constraint firstItem="4St-mx-rNS" firstAttribute="top" secondItem="aVv-Ix-SZI" secondAttribute="bottom" constant="79.333333333333883" id="rKH-Yt-mwC"/>
+                            <constraint firstItem="aVv-Ix-SZI" firstAttribute="top" secondItem="n7e-NZ-eru" secondAttribute="bottom" constant="46.666666666666686" id="x1x-Xk-33t"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="rvh-Yv-oq8"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="72s-93-m16" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-690" y="1708.75"/>
+            <point key="canvasLocation" x="-691.304347826087" y="1708.2589285714284"/>
         </scene>
         <!--ChatBotSearch-->
         <scene sceneID="Unn-hY-SKD">
@@ -91,8 +84,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="TrashGreen" width="64" height="64"/>
-        <image name="TrashWhite" width="64" height="64"/>
-        <image name="TrashYellow" width="64" height="64"/>
+        <image name="trash" catalog="system" width="60" height="64"/>
     </resources>
 </document>
