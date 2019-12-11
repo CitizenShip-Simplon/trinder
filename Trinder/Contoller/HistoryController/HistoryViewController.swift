@@ -12,7 +12,7 @@ class HistoryViewController: UIViewController {
 
     @IBOutlet weak var collectionView: UICollectionView!
  
-    var itemsInSections: Array<Array<UIImage>> = [[#imageLiteral(resourceName: "meet"), #imageLiteral(resourceName: "banaba"), #imageLiteral(resourceName: "ananas")], [#imageLiteral(resourceName: "amazonBox"), #imageLiteral(resourceName: "canOfCoke"), #imageLiteral(resourceName: "paper"), #imageLiteral(resourceName: "cornFlakesBox")], [#imageLiteral(resourceName: "wineGlass"), #imageLiteral(resourceName: "bottleOfWine"), #imageLiteral(resourceName: "shotGlasses")], [#imageLiteral(resourceName: "painting"), #imageLiteral(resourceName: "alarmClock"), #imageLiteral(resourceName: "mirror")]]
+    var itemsInSections: Array<Array<UIImage>> = [[#imageLiteral(resourceName: "meet"), #imageLiteral(resourceName: "banaba"), #imageLiteral(resourceName: "ananas")], [#imageLiteral(resourceName: "canOfCoke"), #imageLiteral(resourceName: "canOfCoke"), #imageLiteral(resourceName: "paper"), #imageLiteral(resourceName: "bicycle")], [#imageLiteral(resourceName: "wineGlass"), #imageLiteral(resourceName: "bottleOfWine"), #imageLiteral(resourceName: "shotGlasses")], [#imageLiteral(resourceName: "painting"), #imageLiteral(resourceName: "wineGlass"), #imageLiteral(resourceName: "mirror")]]
  
     var sections: Array<String> = ["House trash", "recycle trash", "glass trash", "dechetery"]
     var iconTrash: [UIImage] = [#imageLiteral(resourceName: "trashBrown"), #imageLiteral(resourceName: "trashYellow"), #imageLiteral(resourceName: "trashGreen"), #imageLiteral(resourceName: "traskTruck")]
