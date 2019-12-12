@@ -13,6 +13,7 @@
 		301D60772396B89F00AB84E1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 301D60752396B89F00AB84E1 /* Main.storyboard */; };
 		301D60792396B89F00AB84E1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 301D60782396B89F00AB84E1 /* Assets.xcassets */; };
 		301D607C2396B89F00AB84E1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 301D607A2396B89F00AB84E1 /* LaunchScreen.storyboard */; };
+		30A36F8B23A182B600A5FD59 /* alex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A36F8A23A182B600A5FD59 /* alex.swift */; };
 		BD72E5312397B539009DC584 /* RightAnswer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD72E5302397B539009DC584 /* RightAnswer.storyboard */; };
 		BD72E5342397B627009DC584 /* BadAnswer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD72E5322397B627009DC584 /* BadAnswer.storyboard */; };
 		BD72E5362397B8CB009DC584 /* History.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD72E5352397B8CB009DC584 /* History.storyboard */; };
@@ -34,6 +35,7 @@
 		301D60782396B89F00AB84E1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		301D607B2396B89F00AB84E1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		301D607D2396B89F00AB84E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		30A36F8A23A182B600A5FD59 /* alex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = alex.swift; sourceTree = "<group>"; };
 		BD72E5302397B539009DC584 /* RightAnswer.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = RightAnswer.storyboard; path = Trinder/View/GameView/RightAnswer.storyboard; sourceTree = SOURCE_ROOT; };
 		BD72E5332397B627009DC584 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/BadAnswer.storyboard; sourceTree = "<group>"; };
 		BD72E5352397B8CB009DC584 /* History.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = History.storyboard; path = Trinder/View/HistoryView/History.storyboard; sourceTree = SOURCE_ROOT; };
@@ -100,6 +102,7 @@
 			isa = PBXGroup;
 			children = (
 				BD72E5392397BA7B009DC584 /* ChatBot.storyboard */,
+				30A36F8A23A182B600A5FD59 /* alex.swift */,
 				BD72E53C2397BACD009DC584 /* ChatBotSearch.storyboard */,
 			);
 			path = ChatBotView;
@@ -233,6 +236,7 @@
 			files = (
 				301D60742396B89F00AB84E1 /* ViewController.swift in Sources */,
 				301D60702396B89E00AB84E1 /* AppDelegate.swift in Sources */,
+				30A36F8B23A182B600A5FD59 /* alex.swift in Sources */,
 				BD72E5512397FDB2009DC584 /* imageViewerViewController.swift in Sources */,
 				BD72E54B2397C9F0009DC584 /* HistoryViewController.swift in Sources */,
 				BD72E54E2397CB61009DC584 /* menageCollectionViewCell.swift in Sources */,

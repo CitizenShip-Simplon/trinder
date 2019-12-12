@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="PYx-CU-tM4">
-    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -12,15 +12,15 @@
             <objects>
                 <viewController id="PYx-CU-tM4" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jHU-he-zaT">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <searchBar contentMode="redraw" searchBarStyle="minimal" text="bouteille" translatesAutoresizingMaskIntoConstraints="NO" id="WL9-Dp-cDv">
-                                <rect key="frame" x="20" y="128.5" width="335" height="56"/>
+                                <rect key="frame" x="20" y="254" width="374" height="56"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Que souhaites-tu recycler aujourd'hui?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yS2-Fd-GA8">
-                                <rect key="frame" x="45.5" y="8" width="284" height="71"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quelle type de déchet à recycler aujourd'hui?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yS2-Fd-GA8">
+                                <rect key="frame" x="65" y="52" width="284" height="71"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="284" id="PzZ-2X-bKt"/>
                                     <constraint firstAttribute="height" constant="71" id="t4P-VX-92k"/>
@@ -30,23 +30,23 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Elle est en verre?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aVv-Ix-SZI">
-                                <rect key="frame" x="86.5" y="317" width="202" height="33.5"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <rect key="frame" x="127" y="435" width="160" height="26.333333333333314"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <color key="textColor" red="0.049148997299999997" green="0.50502562920000005" blue="0.98328930140000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Elle est en plastique?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n7e-NZ-eru">
-                                <rect key="frame" x="61.5" y="236.5" width="252" height="33.5"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <rect key="frame" x="107.33333333333333" y="362" width="199.33333333333337" height="26.333333333333314"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <color key="textColor" red="0.049148997299999997" green="0.50502562920000005" blue="0.98328930140000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="trash" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="4St-mx-rNS">
-                                <rect key="frame" x="24.5" y="428.5" width="326" height="169.5"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TrashGreen" translatesAutoresizingMaskIntoConstraints="NO" id="4St-mx-rNS">
+                                <rect key="frame" x="42" y="540.66666666666663" width="330" height="170"/>
                                 <color key="tintColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="326" id="1Jn-Go-EPa"/>
-                                    <constraint firstAttribute="height" constant="168.66999999999999" id="84r-2r-sbb"/>
+                                    <constraint firstAttribute="width" constant="330" id="1Jn-Go-EPa"/>
+                                    <constraint firstAttribute="height" constant="170" id="84r-2r-sbb"/>
                                 </constraints>
                             </imageView>
                         </subviews>
@@ -80,10 +80,353 @@
                 <viewControllerPlaceholder storyboardName="ChatBotSearch" id="JVg-rI-Pzw" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VS9-2c-9bF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="71" y="1684"/>
+            <point key="canvasLocation" x="-1700" y="1709"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="l8E-qu-vyc">
+            <objects>
+                <viewController id="Hnj-lK-CiT" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fqk-53-FwQ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="tu peut surment le réparer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p6c-zh-EOK">
+                                <rect key="frame" x="85.333333333333329" y="435" width="243.33333333333337" height="26.333333333333314"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <color key="textColor" red="0.049148997299999997" green="0.50502562920000005" blue="0.98328930140000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <searchBar contentMode="redraw" searchBarStyle="minimal" text="electro ménager" translatesAutoresizingMaskIntoConstraints="NO" id="qEs-9u-zF0">
+                                <rect key="frame" x="20" y="249" width="374" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quelle type de déchet à recycler aujourd'hui?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="phi-k1-YmH">
+                                <rect key="frame" x="65" y="52" width="284" height="71"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="71" id="BC9-v4-Xhg"/>
+                                    <constraint firstAttribute="width" constant="284" id="NjL-FQ-adc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <color key="textColor" red="0.049148997299999997" green="0.50502562920000005" blue="0.98328930140000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="reparer" translatesAutoresizingMaskIntoConstraints="NO" id="gZ6-OV-1WB">
+                                <rect key="frame" x="42" y="541.33333333333337" width="330" height="170"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="170" id="YPQ-TG-soC"/>
+                                    <constraint firstAttribute="width" constant="330" id="yR6-Lj-Lwu"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="p6c-zh-EOK" firstAttribute="centerY" secondItem="fqk-53-FwQ" secondAttribute="centerY" id="1r0-oe-6HT"/>
+                            <constraint firstItem="p6c-zh-EOK" firstAttribute="top" secondItem="qEs-9u-zF0" secondAttribute="bottom" constant="130" id="9O0-ua-Hw6"/>
+                            <constraint firstItem="gZ6-OV-1WB" firstAttribute="centerX" secondItem="fqk-53-FwQ" secondAttribute="centerX" id="PRr-c1-GV7"/>
+                            <constraint firstItem="phi-k1-YmH" firstAttribute="top" secondItem="nGt-qf-eEj" secondAttribute="top" constant="8" id="TDi-9C-bL1"/>
+                            <constraint firstAttribute="trailing" secondItem="qEs-9u-zF0" secondAttribute="trailing" constant="20" id="cDk-Vc-Yak"/>
+                            <constraint firstItem="qEs-9u-zF0" firstAttribute="centerX" secondItem="fqk-53-FwQ" secondAttribute="centerX" id="e3m-4c-q7z"/>
+                            <constraint firstItem="p6c-zh-EOK" firstAttribute="centerX" secondItem="fqk-53-FwQ" secondAttribute="centerX" id="gDl-pq-sVf"/>
+                            <constraint firstItem="gZ6-OV-1WB" firstAttribute="top" secondItem="p6c-zh-EOK" secondAttribute="bottom" constant="80" id="hMb-aM-uMz"/>
+                            <constraint firstItem="qEs-9u-zF0" firstAttribute="leading" secondItem="nGt-qf-eEj" secondAttribute="leading" constant="20" id="hqp-7o-3cj"/>
+                            <constraint firstItem="p6c-zh-EOK" firstAttribute="centerX" secondItem="fqk-53-FwQ" secondAttribute="centerX" id="sD9-ow-KKp"/>
+                            <constraint firstItem="phi-k1-YmH" firstAttribute="centerX" secondItem="fqk-53-FwQ" secondAttribute="centerX" id="w1I-YW-4Cu"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="nGt-qf-eEj"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mMN-XY-ynS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="779.71014492753625" y="1711.6071428571429"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="xqP-I3-m91">
+            <objects>
+                <viewController id="WcT-Jn-HGh" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VlQ-k5-Hyt">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="dechetterie-1" translatesAutoresizingMaskIntoConstraints="NO" id="1nf-BW-ovx">
+                                <rect key="frame" x="42" y="657" width="330" height="170"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="170" id="J55-D0-i0t"/>
+                                    <constraint firstAttribute="width" constant="330" id="Ypq-ra-Poy"/>
+                                </constraints>
+                            </imageView>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="YPR-sh-pLa">
+                                <rect key="frame" x="82" y="142" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </mapView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="A déposer en pharmacie" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GgP-NK-JPt">
+                                <rect key="frame" x="82" y="454" width="231" height="27"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <color key="textColor" red="0.049148997299999997" green="0.50502562920000005" blue="0.98328930140000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="vWe-go-Azf"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x6n-4m-9Pa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1244.9275362318842" y="1069.4196428571429"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="qvW-p6-Egz">
+            <objects>
+                <viewController id="CR2-hv-Irk" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="159-AC-ZTc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quelle type de déchet à recycler aujourd'hui?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3tZ-Lu-Yz4">
+                                <rect key="frame" x="65" y="52" width="284" height="71"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="284" id="0lj-oB-qd8"/>
+                                    <constraint firstAttribute="height" constant="71" id="LrC-sk-pVf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <color key="textColor" red="0.049148997299999997" green="0.50502562920000005" blue="0.98328930140000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <searchBar contentMode="redraw" ambiguous="YES" searchBarStyle="minimal" text="medicament" translatesAutoresizingMaskIntoConstraints="NO" id="P8K-GN-xV2">
+                                <rect key="frame" x="20" y="249" width="374" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="logo-pharmacie-1" translatesAutoresizingMaskIntoConstraints="NO" id="rd7-vk-vIW">
+                                <rect key="frame" x="42" y="541.33333333333337" width="330" height="170"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="170" id="26o-7Q-WaE"/>
+                                    <constraint firstAttribute="width" constant="330" id="TND-5U-paB"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="P8K-GN-xV2" secondAttribute="trailing" constant="20" id="2XG-X9-75x"/>
+                            <constraint firstItem="rd7-vk-vIW" firstAttribute="centerX" secondItem="159-AC-ZTc" secondAttribute="centerX" id="7DX-91-JKB"/>
+                            <constraint firstItem="P8K-GN-xV2" firstAttribute="centerX" secondItem="159-AC-ZTc" secondAttribute="centerX" id="7zp-bZ-gSq"/>
+                            <constraint firstItem="P8K-GN-xV2" firstAttribute="leading" secondItem="d2v-nc-pZO" secondAttribute="leading" constant="20" id="8Vn-f6-EaO"/>
+                            <constraint firstItem="3tZ-Lu-Yz4" firstAttribute="top" secondItem="d2v-nc-pZO" secondAttribute="top" constant="8" id="Abz-gv-uKm"/>
+                            <constraint firstItem="3tZ-Lu-Yz4" firstAttribute="centerX" secondItem="159-AC-ZTc" secondAttribute="centerX" id="ZUn-0o-9dq"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="d2v-nc-pZO"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ujb-yJ-Lw1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1442.0289855072465" y="1708.9285714285713"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="lmK-7Y-GdU">
+            <objects>
+                <viewController id="GyP-tm-MWe" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Yoc-cJ-noK">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dechetterie-1" translatesAutoresizingMaskIntoConstraints="NO" id="Agg-2K-ICr">
+                                <rect key="frame" x="42" y="541.33333333333337" width="330" height="170"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="330" id="JPB-E8-9V7"/>
+                                    <constraint firstAttribute="height" constant="170" id="TnR-YX-OgQ"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quelle type de déchet à recycler aujourd'hui?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AUf-ws-gbA">
+                                <rect key="frame" x="65" y="52" width="284" height="71"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="284" id="9RQ-sX-AwJ"/>
+                                    <constraint firstAttribute="height" constant="71" id="Vdp-GL-apQ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <color key="textColor" red="0.049148997299999997" green="0.50502562920000005" blue="0.98328930140000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <searchBar contentMode="redraw" searchBarStyle="minimal" text="eletroménager" translatesAutoresizingMaskIntoConstraints="NO" id="6sk-BK-vpn">
+                                <rect key="frame" x="20" y="249" width="374" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Peux tu le réparer?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1j8-If-pX0">
+                                <rect key="frame" x="119.33333333333333" y="435" width="175.33333333333337" height="26.333333333333314"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <color key="textColor" red="0.049148997299999997" green="0.50502562920000005" blue="0.98328930140000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ecZ-4a-fVs">
+                                <rect key="frame" x="207" y="326" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <color key="textColor" red="0.049148997299999997" green="0.50502562920000005" blue="0.98328930140000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sinon la déchetterie" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0re-no-X1W">
+                                <rect key="frame" x="113.00000000000001" y="481.33333333333331" width="188.33333333333337" height="26.333333333333314"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <color key="textColor" red="0.049148997299999997" green="0.50502562920000005" blue="0.98328930140000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Peut-il servir à quelqu'un d'autre?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kw3-iB-63o">
+                                <rect key="frame" x="48.666666666666657" y="388.66666666666669" width="316.66666666666674" height="26.333333333333314"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <color key="textColor" red="0.049148997299999997" green="0.50502562920000005" blue="0.98328930140000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Agg-2K-ICr" firstAttribute="top" secondItem="1j8-If-pX0" secondAttribute="bottom" constant="80" id="4e8-Vh-RQ3"/>
+                            <constraint firstItem="Agg-2K-ICr" firstAttribute="centerX" secondItem="Yoc-cJ-noK" secondAttribute="centerX" id="BDE-gz-9dO"/>
+                            <constraint firstItem="6sk-BK-vpn" firstAttribute="centerX" secondItem="Yoc-cJ-noK" secondAttribute="centerX" id="Cyh-xv-0w3"/>
+                            <constraint firstItem="AUf-ws-gbA" firstAttribute="top" secondItem="3KU-nK-Fjq" secondAttribute="top" constant="8" id="Dgm-4d-0JW"/>
+                            <constraint firstItem="AUf-ws-gbA" firstAttribute="centerX" secondItem="Yoc-cJ-noK" secondAttribute="centerX" id="DuN-gL-FME"/>
+                            <constraint firstItem="1j8-If-pX0" firstAttribute="top" secondItem="Kw3-iB-63o" secondAttribute="bottom" constant="20" id="GXw-gN-SFP"/>
+                            <constraint firstItem="1j8-If-pX0" firstAttribute="top" secondItem="6sk-BK-vpn" secondAttribute="bottom" constant="130" id="I3V-9j-Zwi"/>
+                            <constraint firstItem="3KU-nK-Fjq" firstAttribute="trailing" secondItem="6sk-BK-vpn" secondAttribute="trailing" constant="20" id="JNO-ur-z4L"/>
+                            <constraint firstItem="6sk-BK-vpn" firstAttribute="leading" secondItem="Yoc-cJ-noK" secondAttribute="leading" constant="20" id="N7h-TY-brp"/>
+                            <constraint firstItem="Kw3-iB-63o" firstAttribute="centerX" secondItem="Yoc-cJ-noK" secondAttribute="centerX" id="NrT-Ud-yGk"/>
+                            <constraint firstItem="1j8-If-pX0" firstAttribute="centerY" secondItem="Yoc-cJ-noK" secondAttribute="centerY" id="OSK-qa-4Nv"/>
+                            <constraint firstItem="0re-no-X1W" firstAttribute="centerX" secondItem="Yoc-cJ-noK" secondAttribute="centerX" id="Qk6-pG-2uD"/>
+                            <constraint firstItem="1j8-If-pX0" firstAttribute="centerX" secondItem="Yoc-cJ-noK" secondAttribute="centerX" id="TlM-Is-Qxb"/>
+                            <constraint firstItem="1j8-If-pX0" firstAttribute="centerX" secondItem="Yoc-cJ-noK" secondAttribute="centerX" id="Yuh-O0-F1k"/>
+                            <constraint firstItem="ecZ-4a-fVs" firstAttribute="centerX" secondItem="Yoc-cJ-noK" secondAttribute="centerX" id="ajq-pP-m8k"/>
+                            <constraint firstItem="0re-no-X1W" firstAttribute="top" secondItem="1j8-If-pX0" secondAttribute="bottom" constant="20" id="jCd-iA-sIc"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="3KU-nK-Fjq"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iyc-DT-LMY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2166.666666666667" y="1708.9285714285713"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="MYI-nN-vbb">
+            <objects>
+                <viewController id="wsb-Pf-QYK" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jUj-4A-5WW">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="images" translatesAutoresizingMaskIntoConstraints="NO" id="3JB-IS-oPx">
+                                <rect key="frame" x="42" y="541.33333333333337" width="330" height="170"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="170" id="hcm-XA-82z"/>
+                                    <constraint firstAttribute="width" constant="330" id="umQ-di-Jog"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quelle type de déchet à recycler aujourd'hui?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T93-Cz-iRS">
+                                <rect key="frame" x="65" y="52" width="284" height="71"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="71" id="ZdZ-uk-ZY0"/>
+                                    <constraint firstAttribute="width" constant="284" id="w5h-sd-G7x"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <color key="textColor" red="0.049148997299999997" green="0.50502562920000005" blue="0.98328930140000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <searchBar contentMode="redraw" searchBarStyle="minimal" text="textile" translatesAutoresizingMaskIntoConstraints="NO" id="jws-3K-anh">
+                                <rect key="frame" x="20" y="249" width="374" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="conteneur textile" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yiE-wk-blU">
+                                <rect key="frame" x="128" y="435" width="158.33333333333337" height="26.333333333333314"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <color key="textColor" red="0.049148997299999997" green="0.50502562920000005" blue="0.98328930140000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Peut-il servir à quelqu'un d'autre?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4jj-b5-kFF">
+                                <rect key="frame" x="48.666666666666657" y="388.66666666666669" width="316.66666666666674" height="26.333333333333314"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <color key="textColor" red="0.049148997299999997" green="0.50502562920000005" blue="0.98328930140000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="T93-Cz-iRS" firstAttribute="centerX" secondItem="jUj-4A-5WW" secondAttribute="centerX" id="0lr-c0-PON"/>
+                            <constraint firstItem="0mZ-yJ-47d" firstAttribute="trailing" secondItem="jws-3K-anh" secondAttribute="trailing" constant="20" id="9ej-ii-Dj8"/>
+                            <constraint firstItem="yiE-wk-blU" firstAttribute="centerX" secondItem="jUj-4A-5WW" secondAttribute="centerX" id="9gN-ox-VlH"/>
+                            <constraint firstItem="yiE-wk-blU" firstAttribute="top" secondItem="jws-3K-anh" secondAttribute="bottom" constant="130" id="EsT-rW-57w"/>
+                            <constraint firstItem="T93-Cz-iRS" firstAttribute="top" secondItem="0mZ-yJ-47d" secondAttribute="top" constant="8" id="X3Z-e0-18p"/>
+                            <constraint firstItem="yiE-wk-blU" firstAttribute="centerY" secondItem="jUj-4A-5WW" secondAttribute="centerY" id="Zw8-44-zMD"/>
+                            <constraint firstItem="4jj-b5-kFF" firstAttribute="centerX" secondItem="jUj-4A-5WW" secondAttribute="centerX" id="lE1-km-DuT"/>
+                            <constraint firstItem="3JB-IS-oPx" firstAttribute="centerX" secondItem="jUj-4A-5WW" secondAttribute="centerX" id="som-QL-gXD"/>
+                            <constraint firstItem="3JB-IS-oPx" firstAttribute="top" secondItem="yiE-wk-blU" secondAttribute="bottom" constant="80" id="tX8-xm-TPL"/>
+                            <constraint firstItem="jws-3K-anh" firstAttribute="leading" secondItem="jUj-4A-5WW" secondAttribute="leading" constant="20" id="wN3-RS-Z1F"/>
+                            <constraint firstItem="yiE-wk-blU" firstAttribute="top" secondItem="4jj-b5-kFF" secondAttribute="bottom" constant="20" id="z0E-qV-TSJ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="0mZ-yJ-47d"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Y5w-ap-kTW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2895.6521739130435" y="1706.9196428571429"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="s9o-rv-aMs">
+            <objects>
+                <viewController id="4MC-kp-7nN" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6Zk-Ni-NaR">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" searchBarStyle="minimal" text="Meuble" translatesAutoresizingMaskIntoConstraints="NO" id="YBH-Hm-uvs">
+                                <rect key="frame" x="20" y="249" width="374" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quelle type de déchet à recycler aujourd'hui?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z4b-Bl-9Kx">
+                                <rect key="frame" x="65" y="52" width="284" height="71"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="284" id="HRA-b8-EdU"/>
+                                    <constraint firstAttribute="height" constant="71" id="t9n-YO-VhA"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <color key="textColor" red="0.049148997299999997" green="0.50502562920000005" blue="0.98328930140000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="As tu penser a donner" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Zu-vh-2vZ">
+                                <rect key="frame" x="103.66666666666669" y="435" width="207" height="26.333333333333314"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <color key="textColor" red="0.049148997299999997" green="0.50502562920000005" blue="0.98328930140000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="doner" translatesAutoresizingMaskIntoConstraints="NO" id="uTK-BJ-Ffs">
+                                <rect key="frame" x="42" y="541.33333333333337" width="330" height="170"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="330" id="CUD-p6-snM"/>
+                                    <constraint firstAttribute="height" constant="170" id="g4g-jd-xJn"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="3Zu-vh-2vZ" firstAttribute="centerX" secondItem="6Zk-Ni-NaR" secondAttribute="centerX" id="6gv-bi-hYX"/>
+                            <constraint firstItem="z4b-Bl-9Kx" firstAttribute="centerX" secondItem="6Zk-Ni-NaR" secondAttribute="centerX" id="H27-u5-wWP"/>
+                            <constraint firstItem="uTK-BJ-Ffs" firstAttribute="top" secondItem="3Zu-vh-2vZ" secondAttribute="bottom" constant="80" id="H5F-cn-SjJ"/>
+                            <constraint firstItem="3Zu-vh-2vZ" firstAttribute="top" secondItem="YBH-Hm-uvs" secondAttribute="bottom" constant="130" id="Joi-8k-ccW"/>
+                            <constraint firstItem="uTK-BJ-Ffs" firstAttribute="centerX" secondItem="6Zk-Ni-NaR" secondAttribute="centerX" id="RJz-07-BXs"/>
+                            <constraint firstItem="3Zu-vh-2vZ" firstAttribute="centerY" secondItem="6Zk-Ni-NaR" secondAttribute="centerY" id="YMz-fg-hWn"/>
+                            <constraint firstItem="z4b-Bl-9Kx" firstAttribute="top" secondItem="pfO-Bm-lEw" secondAttribute="top" constant="8" id="iGp-r4-1g6"/>
+                            <constraint firstItem="YBH-Hm-uvs" firstAttribute="centerX" secondItem="6Zk-Ni-NaR" secondAttribute="centerX" id="jkM-zW-wKI"/>
+                            <constraint firstItem="YBH-Hm-uvs" firstAttribute="leading" secondItem="pfO-Bm-lEw" secondAttribute="leading" constant="20" id="qMP-4C-k40"/>
+                            <constraint firstAttribute="trailing" secondItem="YBH-Hm-uvs" secondAttribute="trailing" constant="20" id="u8N-uE-uWM"/>
+                            <constraint firstItem="3Zu-vh-2vZ" firstAttribute="centerX" secondItem="6Zk-Ni-NaR" secondAttribute="centerX" id="xJk-mb-Op6"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="pfO-Bm-lEw"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EJ1-Pt-vrf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="36.231884057971016" y="1708.2589285714284"/>
         </scene>
     </scenes>
     <resources>
-        <image name="trash" catalog="system" width="60" height="64"/>
+        <image name="TrashGreen" width="64" height="64"/>
+        <image name="dechetterie-1" width="800" height="800"/>
+        <image name="doner" width="161" height="160"/>
+        <image name="images" width="200" height="200"/>
+        <image name="logo-pharmacie-1" width="300" height="300"/>
+        <image name="reparer" width="225" height="225"/>
     </resources>
 </document>
