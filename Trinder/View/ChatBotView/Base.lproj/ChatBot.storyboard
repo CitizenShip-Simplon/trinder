@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="PYx-CU-tM4">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="2KE-cX-RUZ">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
@@ -7,24 +7,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Messagerie-->
-        <scene sceneID="OM6-47-EvC">
-            <objects>
-                <viewController id="PYx-CU-tM4" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="jHU-he-zaT">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="rvh-Yv-oq8"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Messagerie" image="message" catalog="system" selectedImage="message" id="PGg-eI-pWz">
-                        <color key="badgeColor" cocoaTouchSystemColor="darkTextColor"/>
-                    </tabBarItem>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="72s-93-m16" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-688" y="1710"/>
-        </scene>
         <!--ChatBotSearch-->
         <scene sceneID="Unn-hY-SKD">
             <objects>
@@ -33,8 +15,90 @@
             </objects>
             <point key="canvasLocation" x="71" y="1684"/>
         </scene>
+        <!--Chat Bot View Controller-->
+        <scene sceneID="ch9-F2-t3w">
+            <objects>
+                <viewController id="2KE-cX-RUZ" customClass="ChatBotViewController" customModule="Trinder" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4mX-9f-zMU" customClass="View">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZZd-9w-3bb">
+                                <rect key="frame" x="47" y="224" width="320" height="216"/>
+                            </pickerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quelle type de déchet à recycler aujourd'hui?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xVQ-3C-c2k">
+                                <rect key="frame" x="65" y="52" width="284" height="71"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="71" id="20g-07-UoY"/>
+                                    <constraint firstAttribute="width" constant="284" id="K8Y-Vr-Va5"/>
+                                    <constraint firstAttribute="height" constant="71" id="SKv-6v-d1v"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="284" id="hBT-at-UHd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <color key="textColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qFw-oI-jU5">
+                                <rect key="frame" x="207" y="448" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <color key="textColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PoubelleVerte" translatesAutoresizingMaskIntoConstraints="NO" id="4V3-SG-UDh">
+                                <rect key="frame" x="42" y="563" width="330" height="170"/>
+                                <color key="tintColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="170" id="TAD-Gh-x39"/>
+                                    <constraint firstAttribute="width" constant="330" id="cMT-Lt-iJd"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RHZ-Dk-qHa">
+                                <rect key="frame" x="207" y="496" width="0.0" height="27"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="27" id="P0Z-Sc-VnO"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <color key="textColor" red="0.049148997299999997" green="0.50502562920000005" blue="0.98328930140000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cxX-Vf-HoH">
+                                <rect key="frame" x="207" y="472" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <color key="textColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="4V3-SG-UDh" firstAttribute="top" secondItem="RHZ-Dk-qHa" secondAttribute="bottom" constant="40" id="2ut-VC-84e"/>
+                            <constraint firstItem="xVQ-3C-c2k" firstAttribute="top" secondItem="5uN-Xo-hoO" secondAttribute="top" constant="8" id="EaN-xc-MQh"/>
+                            <constraint firstItem="ZZd-9w-3bb" firstAttribute="centerX" secondItem="4mX-9f-zMU" secondAttribute="centerX" id="HEh-re-Mfy"/>
+                            <constraint firstItem="RHZ-Dk-qHa" firstAttribute="centerX" secondItem="4mX-9f-zMU" secondAttribute="centerX" id="MCe-5Z-g0M"/>
+                            <constraint firstItem="4V3-SG-UDh" firstAttribute="centerX" secondItem="4mX-9f-zMU" secondAttribute="centerX" id="Pa4-wn-QRg"/>
+                            <constraint firstItem="qFw-oI-jU5" firstAttribute="centerX" secondItem="4mX-9f-zMU" secondAttribute="centerX" id="QEr-LO-5rp"/>
+                            <constraint firstItem="qFw-oI-jU5" firstAttribute="top" secondItem="ZZd-9w-3bb" secondAttribute="bottom" constant="8" id="Rfx-C4-ChY"/>
+                            <constraint firstItem="RHZ-Dk-qHa" firstAttribute="top" secondItem="cxX-Vf-HoH" secondAttribute="bottom" constant="24" id="StL-fG-qRa"/>
+                            <constraint firstItem="cxX-Vf-HoH" firstAttribute="centerX" secondItem="4mX-9f-zMU" secondAttribute="centerX" id="ZKJ-dF-clE"/>
+                            <constraint firstItem="cxX-Vf-HoH" firstAttribute="top" secondItem="qFw-oI-jU5" secondAttribute="bottom" constant="24" id="b0V-qf-1e8"/>
+                            <constraint firstItem="xVQ-3C-c2k" firstAttribute="centerX" secondItem="4mX-9f-zMU" secondAttribute="centerX" id="oiU-Y8-7e8"/>
+                            <constraint firstItem="qFw-oI-jU5" firstAttribute="centerY" secondItem="4mX-9f-zMU" secondAttribute="centerY" id="rW0-Dz-2iJ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="5uN-Xo-hoO"/>
+                    </view>
+                    <connections>
+                        <outlet property="firstLabel" destination="qFw-oI-jU5" id="cab-k6-RTR"/>
+                        <outlet property="imageView" destination="4V3-SG-UDh" id="v6W-AP-B11"/>
+                        <outlet property="namePickerView" destination="ZZd-9w-3bb" id="1tB-FK-Fx1"/>
+                        <outlet property="secondLabel" destination="cxX-Vf-HoH" id="oYy-pg-soX"/>
+                        <outlet property="thirdLabel" destination="RHZ-Dk-qHa" id="Oke-0r-4cp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ywv-fK-Eoa" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-514" y="1683"/>
+        </scene>
     </scenes>
     <resources>
-        <image name="message" catalog="system" width="64" height="56"/>
+        <image name="PoubelleVerte" width="16" height="16"/>
     </resources>
 </document>
