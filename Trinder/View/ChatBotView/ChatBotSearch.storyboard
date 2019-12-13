@@ -7,10 +7,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Table View Controller-->
         <scene sceneID="9sy-we-tZP">
             <objects>
-                <viewController id="9s4-9I-LD5" sceneMemberID="viewController">
+                <viewController id="9s4-9I-LD5" customClass="JPBTableViewController" customModule="Trinder" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="iR5-sH-pgq">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -21,57 +21,43 @@
                                     <navigationItem title="&lt; Back" id="SEk-5M-ni1"/>
                                 </items>
                             </navigationBar>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" verticalHuggingPriority="245" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="b8z-Wf-fu5">
-                                <rect key="frame" x="44" y="639" width="318" height="185"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="185" id="zUN-Lr-iY4"/>
-                                </constraints>
-                            </mapView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="7aC-Mg-4nx">
-                                <rect key="frame" x="48" y="110" width="318" height="336"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="336" id="GCr-ds-h0y"/>
-                                </constraints>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="MessageCell" id="T6l-xG-QAW">
-                                        <rect key="frame" x="0.0" y="28" width="318" height="43.5"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="T6l-xG-QAW" id="fcF-SO-PLC">
-                                            <rect key="frame" x="0.0" y="0.0" width="318" height="43.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </prototypes>
-                            </tableView>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Rto-6D-tkd">
-                                <rect key="frame" x="48" y="475" width="318" height="128"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Voici un réparateur dans tes environs." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s3A-8u-qfg">
+                                <rect key="frame" x="20" y="113" width="374" height="27"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="iconrepair" translatesAutoresizingMaskIntoConstraints="NO" id="3iD-sb-fru" userLabel="Icon">
+                                <rect key="frame" x="84" y="540" width="247" height="220"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="maprepair" translatesAutoresizingMaskIntoConstraints="NO" id="Ghw-gL-age">
+                                <rect key="frame" x="20" y="195" width="374" height="274"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="0.1512489914894104" green="0.36250472068786621" blue="0.95299834012985229" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="UWP-I4-cF2" firstAttribute="trailing" secondItem="b8z-Wf-fu5" secondAttribute="trailing" constant="52" id="29G-Ik-ggf"/>
-                            <constraint firstItem="b8z-Wf-fu5" firstAttribute="top" secondItem="Rto-6D-tkd" secondAttribute="bottom" constant="38" id="3FL-XI-t8a"/>
-                            <constraint firstItem="Rto-6D-tkd" firstAttribute="leading" secondItem="UWP-I4-cF2" secondAttribute="leading" constant="83" id="8yM-Jf-X4R"/>
-                            <constraint firstItem="Rto-6D-tkd" firstAttribute="top" secondItem="7aC-Mg-4nx" secondAttribute="bottom" constant="27" id="Gqs-Oa-Zzs"/>
-                            <constraint firstItem="Rto-6D-tkd" firstAttribute="top" secondItem="7aC-Mg-4nx" secondAttribute="bottom" id="KHK-eR-Iy2"/>
-                            <constraint firstItem="7aC-Mg-4nx" firstAttribute="top" secondItem="u5E-dG-0ki" secondAttribute="bottom" constant="22" id="KNm-QO-7V2"/>
-                            <constraint firstItem="Rto-6D-tkd" firstAttribute="centerX" secondItem="b8z-Wf-fu5" secondAttribute="centerX" id="Ka6-Fz-W1g"/>
-                            <constraint firstItem="7aC-Mg-4nx" firstAttribute="centerX" secondItem="iR5-sH-pgq" secondAttribute="centerX" id="ZV9-s5-OZB"/>
-                            <constraint firstItem="b8z-Wf-fu5" firstAttribute="leading" secondItem="UWP-I4-cF2" secondAttribute="leading" constant="44" id="aJg-3B-4ba"/>
                             <constraint firstItem="UWP-I4-cF2" firstAttribute="trailing" secondItem="u5E-dG-0ki" secondAttribute="trailing" constant="6" id="gjA-aY-IOa"/>
-                            <constraint firstItem="UWP-I4-cF2" firstAttribute="bottom" secondItem="b8z-Wf-fu5" secondAttribute="bottom" constant="38" id="hy7-t7-Ool"/>
-                            <constraint firstItem="7aC-Mg-4nx" firstAttribute="leading" secondItem="UWP-I4-cF2" secondAttribute="leading" constant="48" id="kPM-Vs-u3P"/>
                             <constraint firstItem="u5E-dG-0ki" firstAttribute="top" secondItem="UWP-I4-cF2" secondAttribute="top" id="mbW-g7-XYw"/>
                             <constraint firstItem="u5E-dG-0ki" firstAttribute="leading" secondItem="iR5-sH-pgq" secondAttribute="leadingMargin" constant="-26" id="uMy-na-oZz"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="UWP-I4-cF2"/>
                     </view>
+                    <connections>
+                        <outlet property="Icon" destination="3iD-sb-fru" id="oIu-Cp-o92"/>
+                        <outlet property="Map" destination="Ghw-gL-age" id="Sd9-a9-cKq"/>
+                        <outlet property="Message" destination="s3A-8u-qfg" id="908-dV-wQq"/>
+                        <outlet property="mapImage" destination="Ghw-gL-age" id="Wji-Fb-ffr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nuP-Ck-McV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="42.028985507246382" y="1709.5982142857142"/>
+            <point key="canvasLocation" x="61" y="631"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="iconrepair" width="225" height="225"/>
+        <image name="maprepair" width="1106" height="994"/>
+    </resources>
 </document>

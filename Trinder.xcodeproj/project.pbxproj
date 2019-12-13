@@ -12,6 +12,7 @@
 		301D60772396B89F00AB84E1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 301D60752396B89F00AB84E1 /* Main.storyboard */; };
 		301D60792396B89F00AB84E1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 301D60782396B89F00AB84E1 /* Assets.xcassets */; };
 		301D607C2396B89F00AB84E1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 301D607A2396B89F00AB84E1 /* LaunchScreen.storyboard */; };
+		7CC9C92E23A26878006F1298 /* JPBTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CC9C92D23A26878006F1298 /* JPBTableViewController.swift */; };
 		BD72E5312397B539009DC584 /* RightAnswer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD72E5302397B539009DC584 /* RightAnswer.storyboard */; };
 		BD72E5342397B627009DC584 /* BadAnswer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD72E5322397B627009DC584 /* BadAnswer.storyboard */; };
 		BD72E5362397B8CB009DC584 /* History.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD72E5352397B8CB009DC584 /* History.storyboard */; };
@@ -34,6 +35,7 @@
 		301D60782396B89F00AB84E1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		301D607B2396B89F00AB84E1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		301D607D2396B89F00AB84E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7CC9C92D23A26878006F1298 /* JPBTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JPBTableViewController.swift; sourceTree = "<group>"; };
 		BD72E5302397B539009DC584 /* RightAnswer.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = RightAnswer.storyboard; path = Trinder/View/GameView/RightAnswer.storyboard; sourceTree = SOURCE_ROOT; };
 		BD72E5332397B627009DC584 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/BadAnswer.storyboard; sourceTree = "<group>"; };
 		BD72E5352397B8CB009DC584 /* History.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = History.storyboard; path = Trinder/View/HistoryView/History.storyboard; sourceTree = SOURCE_ROOT; };
@@ -87,6 +89,13 @@
 			path = Trinder;
 			sourceTree = "<group>";
 		};
+		7CC9C92A23A14115006F1298 /* ChatController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ChatController;
+			sourceTree = "<group>";
+		};
 		BD5726EF2397A9F3001ED499 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -113,6 +122,7 @@
 			children = (
 				BD72E5392397BA7B009DC584 /* ChatBot.storyboard */,
 				BD72E53C2397BACD009DC584 /* ChatBotSearch.storyboard */,
+				7CC9C92D23A26878006F1298 /* JPBTableViewController.swift */,
 			);
 			path = ChatBotView;
 			sourceTree = "<group>";
@@ -148,6 +158,7 @@
 		BD72E5422397C5D4009DC584 /* Contoller */ = {
 			isa = PBXGroup;
 			children = (
+				7CC9C92A23A14115006F1298 /* ChatController */,
 				BD72E5432397C5ED009DC584 /* HistoryController */,
 			);
 			path = Contoller;
@@ -258,6 +269,7 @@
 				BD9B4A21239D052C00D176F7 /* DecheteryCollection.swift in Sources */,
 				BD72E54B2397C9F0009DC584 /* HistoryViewController.swift in Sources */,
 				301D60722396B89E00AB84E1 /* SceneDelegate.swift in Sources */,
+				7CC9C92E23A26878006F1298 /* JPBTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
