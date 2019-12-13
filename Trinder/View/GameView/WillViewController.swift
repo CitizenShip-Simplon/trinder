@@ -14,6 +14,7 @@ class WillViewController: UIViewController {
     
     
     // var image passed = "" for image passed"1" in masque de Plongée print =
+//    aider pour le premier écran 
     
     struct Déchets {
            
