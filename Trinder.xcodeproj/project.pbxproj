@@ -14,6 +14,7 @@
 		301D607C2396B89F00AB84E1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 301D607A2396B89F00AB84E1 /* LaunchScreen.storyboard */; };
 		305F2C3923A2DE8600C02C4F /* ChatBotControllierView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305F2C3823A2DE8600C02C4F /* ChatBotControllierView.swift */; };
 		305F2C3B23A2E2D300C02C4F /* RightAnswerControllerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305F2C3A23A2E2D300C02C4F /* RightAnswerControllerView.swift */; };
+		305F2C3E23A35E2C00C02C4F /* GameControllerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305F2C3D23A35E2C00C02C4F /* GameControllerView.swift */; };
 		BD72E5312397B539009DC584 /* RightAnswer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD72E5302397B539009DC584 /* RightAnswer.storyboard */; };
 		BD72E5342397B627009DC584 /* BadAnswer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD72E5322397B627009DC584 /* BadAnswer.storyboard */; };
 		BD72E5362397B8CB009DC584 /* History.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD72E5352397B8CB009DC584 /* History.storyboard */; };
@@ -38,6 +39,7 @@
 		301D607D2396B89F00AB84E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		305F2C3823A2DE8600C02C4F /* ChatBotControllierView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatBotControllierView.swift; sourceTree = "<group>"; };
 		305F2C3A23A2E2D300C02C4F /* RightAnswerControllerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RightAnswerControllerView.swift; sourceTree = "<group>"; };
+		305F2C3D23A35E2C00C02C4F /* GameControllerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameControllerView.swift; sourceTree = "<group>"; };
 		BD72E5302397B539009DC584 /* RightAnswer.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = RightAnswer.storyboard; path = Trinder/View/GameView/RightAnswer.storyboard; sourceTree = SOURCE_ROOT; };
 		BD72E5332397B627009DC584 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/BadAnswer.storyboard; sourceTree = "<group>"; };
 		BD72E5352397B8CB009DC584 /* History.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = History.storyboard; path = Trinder/View/HistoryView/History.storyboard; sourceTree = SOURCE_ROOT; };
@@ -102,6 +104,7 @@
 		305F2C3C23A2E40F00C02C4F /* GameView */ = {
 			isa = PBXGroup;
 			children = (
+				305F2C3D23A35E2C00C02C4F /* GameControllerView.swift */,
 			);
 			path = GameView;
 			sourceTree = "<group>";
@@ -277,6 +280,7 @@
 				301D60702396B89E00AB84E1 /* AppDelegate.swift in Sources */,
 				305F2C3B23A2E2D300C02C4F /* RightAnswerControllerView.swift in Sources */,
 				BD9B4A1B239BCBAF00D176F7 /* HistoryDetailViewController.swift in Sources */,
+				305F2C3E23A35E2C00C02C4F /* GameControllerView.swift in Sources */,
 				BD9B4A19239B148800D176F7 /* HistoryReusableView.swift in Sources */,
 				305F2C3923A2DE8600C02C4F /* ChatBotControllierView.swift in Sources */,
 				BD9B4A21239D052C00D176F7 /* DecheteryCollection.swift in Sources */,
