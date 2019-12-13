@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="u0A-qd-N0f">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="UpM-Za-iWq">
     <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
@@ -10,65 +10,78 @@
         <!--Game-->
         <scene sceneID="szs-yB-a7r">
             <objects>
-                <viewController id="UpM-Za-iWq" sceneMemberID="viewController">
+                <viewController id="UpM-Za-iWq" customClass="GameViewController" customModule="Trinder" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="MDI-yM-fzS">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(X) Points" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H4c-0H-qnB">
-                                <rect key="frame" x="30" y="64" width="354" height="36"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <stackView opaque="NO" contentMode="center" layoutMarginsFollowReadableWidth="YES" distribution="fillEqually" alignment="center" spacing="65" translatesAutoresizingMaskIntoConstraints="NO" id="G0Q-kq-IAh">
-                                <rect key="frame" x="10" y="746" width="394" height="47"/>
+                                <rect key="frame" x="50" y="782" width="314" height="30"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uJx-MN-4E1">
-                                        <rect key="frame" x="0.0" y="8.6666666666666288" width="164.66666666666666" height="30"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="124.66666666666667" height="30"/>
                                         <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <state key="normal" title="Recyclable"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Recyclable">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="recy:" destination="UpM-Za-iWq" eventType="touchUpInside" id="1uI-0X-iS1"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dxo-jO-Rya">
-                                        <rect key="frame" x="229.66666666666663" y="8.6666666666666288" width="164.33333333333337" height="30"/>
+                                        <rect key="frame" x="189.66666666666666" y="0.0" width="124.33333333333334" height="30"/>
                                         <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <state key="normal" title="Non Recyclable"/>
+                                        <state key="normal" title="Non Recyclable">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="reci:" destination="UpM-Za-iWq" eventType="touchUpInside" id="Jxb-jl-hf4"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Où jette-tu (le déchet) ?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hpv-mE-kY4">
-                                <rect key="frame" x="10" y="120" width="394" height="30"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quelle poubelle?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hpv-mE-kY4">
+                                <rect key="frame" x="20" y="152.33333333333334" width="374" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lX3-15-p9a">
-                                <rect key="frame" x="65" y="225" width="284" height="446"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Points: (X)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H4c-0H-qnB">
+                                <rect key="frame" x="80" y="64" width="254" height="38.333333333333343"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lX3-15-p9a">
+                                <rect key="frame" x="60" y="256" width="294" height="385"/>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" red="0.73333333333333328" green="0.87058823529411766" blue="0.98431372549019602" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="lX3-15-p9a" firstAttribute="centerY" secondItem="MDI-yM-fzS" secondAttribute="centerY" id="6Fs-DB-phK"/>
-                            <constraint firstItem="hpv-mE-kY4" firstAttribute="top" secondItem="H4c-0H-qnB" secondAttribute="bottom" constant="20" id="7Qo-RG-rRu"/>
-                            <constraint firstItem="H4c-0H-qnB" firstAttribute="leading" secondItem="eI0-gL-uAl" secondAttribute="leading" constant="30" id="8mp-Wp-VCl"/>
-                            <constraint firstItem="G0Q-kq-IAh" firstAttribute="top" secondItem="lX3-15-p9a" secondAttribute="bottom" constant="75" id="AHl-vF-cRr"/>
-                            <constraint firstItem="hpv-mE-kY4" firstAttribute="leading" secondItem="eI0-gL-uAl" secondAttribute="leading" constant="10" id="KBt-LS-9xy"/>
-                            <constraint firstItem="lX3-15-p9a" firstAttribute="top" secondItem="hpv-mE-kY4" secondAttribute="bottom" constant="75" id="Lew-Bd-drg"/>
-                            <constraint firstItem="H4c-0H-qnB" firstAttribute="top" secondItem="eI0-gL-uAl" secondAttribute="top" constant="20" id="WGc-ej-ejT"/>
-                            <constraint firstItem="lX3-15-p9a" firstAttribute="centerX" secondItem="MDI-yM-fzS" secondAttribute="centerX" id="aUp-tj-eY6"/>
-                            <constraint firstItem="eI0-gL-uAl" firstAttribute="trailing" secondItem="G0Q-kq-IAh" secondAttribute="trailing" constant="10" id="beV-48-iBD"/>
-                            <constraint firstItem="eI0-gL-uAl" firstAttribute="bottom" secondItem="G0Q-kq-IAh" secondAttribute="bottom" constant="20" id="gqw-IY-mhd"/>
-                            <constraint firstItem="G0Q-kq-IAh" firstAttribute="leading" secondItem="eI0-gL-uAl" secondAttribute="leading" constant="10" id="h5W-Jx-Jhq"/>
-                            <constraint firstItem="eI0-gL-uAl" firstAttribute="trailing" secondItem="lX3-15-p9a" secondAttribute="trailing" constant="65" id="hNq-6S-9sp"/>
-                            <constraint firstItem="eI0-gL-uAl" firstAttribute="trailing" secondItem="H4c-0H-qnB" secondAttribute="trailing" constant="30" id="jml-2F-lQi"/>
-                            <constraint firstItem="lX3-15-p9a" firstAttribute="leading" secondItem="eI0-gL-uAl" secondAttribute="leading" constant="65" id="sN1-G3-JA4"/>
-                            <constraint firstItem="eI0-gL-uAl" firstAttribute="trailing" secondItem="hpv-mE-kY4" secondAttribute="trailing" constant="10" id="vz3-xe-f4E"/>
+                            <constraint firstItem="eI0-gL-uAl" firstAttribute="trailing" secondItem="lX3-15-p9a" secondAttribute="trailing" constant="60" id="4DJ-6G-weM"/>
+                            <constraint firstItem="lX3-15-p9a" firstAttribute="centerX" secondItem="MDI-yM-fzS" secondAttribute="centerX" id="BOE-ga-2jy"/>
+                            <constraint firstItem="eI0-gL-uAl" firstAttribute="bottom" secondItem="G0Q-kq-IAh" secondAttribute="bottom" constant="50" id="IXR-Dc-GZW"/>
+                            <constraint firstItem="eI0-gL-uAl" firstAttribute="trailing" secondItem="G0Q-kq-IAh" secondAttribute="trailing" constant="50" id="Jju-Sa-qkM"/>
+                            <constraint firstItem="G0Q-kq-IAh" firstAttribute="leading" secondItem="eI0-gL-uAl" secondAttribute="leading" constant="50" id="QN0-2c-sGP"/>
+                            <constraint firstItem="eI0-gL-uAl" firstAttribute="trailing" secondItem="hpv-mE-kY4" secondAttribute="trailing" constant="20" id="R39-u1-vsh"/>
+                            <constraint firstItem="lX3-15-p9a" firstAttribute="leading" secondItem="eI0-gL-uAl" secondAttribute="leading" constant="60" id="YQb-Em-Zah"/>
+                            <constraint firstItem="eI0-gL-uAl" firstAttribute="trailing" secondItem="H4c-0H-qnB" secondAttribute="trailing" constant="80" id="ZzU-9O-VFa"/>
+                            <constraint firstItem="hpv-mE-kY4" firstAttribute="top" secondItem="H4c-0H-qnB" secondAttribute="bottom" constant="50" id="e8w-xv-gKY"/>
+                            <constraint firstItem="hpv-mE-kY4" firstAttribute="leading" secondItem="eI0-gL-uAl" secondAttribute="leading" constant="20" id="iHL-O3-GSe"/>
+                            <constraint firstItem="H4c-0H-qnB" firstAttribute="leading" secondItem="eI0-gL-uAl" secondAttribute="leading" constant="80" id="pUS-df-OBW"/>
+                            <constraint firstItem="lX3-15-p9a" firstAttribute="centerY" secondItem="MDI-yM-fzS" secondAttribute="centerY" id="uwn-TO-cHS"/>
+                            <constraint firstItem="H4c-0H-qnB" firstAttribute="top" secondItem="eI0-gL-uAl" secondAttribute="top" constant="20" id="zWB-TW-SJ8"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="eI0-gL-uAl"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Game" image="gamecontroller" catalog="system" id="RoZ-Ft-q71">
                         <color key="badgeColor" cocoaTouchSystemColor="darkTextColor"/>
                     </tabBarItem>
+                    <connections>
+                        <outlet property="image" destination="lX3-15-p9a" id="JZa-po-HTL"/>
+                        <outlet property="question" destination="lX3-15-p9a" id="sOx-Ps-lDP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Grp-1n-D5s" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -89,23 +102,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JWF-iQ-MGb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1066.6666666666667" y="-38.169642857142854"/>
-        </scene>
-        <!--Tab Bar Controller-->
-        <scene sceneID="rPv-kf-zhP">
-            <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="u0A-qd-N0f" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="fYK-Px-Ofa">
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    </tabBar>
-                    <connections>
-                        <segue destination="UpM-Za-iWq" kind="relationship" relationship="viewControllers" id="YsX-E0-pXd"/>
-                    </connections>
-                </tabBarController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="MoB-aA-WJM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-688.40579710144937" y="143.97321428571428"/>
         </scene>
     </scenes>
     <resources>
