@@ -11,7 +11,6 @@ import UIKit
 class GameControllerView: UIViewController{
     var score = 0
     
-    
     //structure poubelle: image couleur poubelle
     struct Poubelle {
         let image:UIImage
@@ -31,10 +30,7 @@ class GameControllerView: UIViewController{
             self.poubelle = typeDechet
         }
     }
-//    enum PoubelleCouleur: String {
-//        case
-//    }
-    
+
     // création des 4 poubelless et leur images
     
     let poubelleBlanche = Poubelle(image: UIImage(named: "poubelleBlanche")!)
@@ -51,8 +47,10 @@ class GameControllerView: UIViewController{
     @IBOutlet weak var leftTrashButton: UIButton!
     @IBOutlet weak var rightTrashButton: UIButton!
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         // ajout des images dans le tableau
         initViews()
         generateQuestion()
@@ -62,31 +60,31 @@ class GameControllerView: UIViewController{
     // permet quand on clic sur le boutons de regenerer une question
     @IBAction func onButtonClicked(_ sender: UIButton) {
         generateQuestion()
+        
     }
-    
-    @IBAction func rightClic(_ sender: Any) {
+    @IBAction func rightClick(_ sender: UIButton) {
+        // augmente le score à chaque clic
         score += 1
         scoreLabel.text = "\(score)"
-        func shouldPerformSegue(withIdentifier identifier: RightAnswerViewController,
-                                sender: UIButton) -> Bool {
-            if scoreLabel.text == "10"{
-                return true
-            } else {
-                return false
-            }
+        if score % 5 == 0{
+            performSegue(withIdentifier: "RightAnswer", sender: sender) // charge l'ecran Right Answer quand score/5 = 0
         }
     }
-    
     func generateQuestion() {
-        //genere un nombre random = max dechets.count
-        let randomNumber = generateRandom(max: dechets.count)
-           
-           //genere poubelle au hasard et bonne réponse
-           dechetImageView.image = dechets[randomNumber].image
-           leftTrashButton.imageView?.image = dechets[randomNumber].poubelle.image
+        //genere un nombre random = max dechets.randomElement()
+        let dechet = dechets.randomElement()
+        dechetImageView.image = dechet?.image
+        //genere l'image du bouton gauche en normal (afficher)
+        leftTrashButton.setImage(dechet?.poubelle.image, for: .normal)
+        //genere l'image du dechet
+        dechetImageView.image = dechet?.image
+        // permet d'eviter le chanegemnt de couleur de la poubelle quand elle est cliqué
+        leftTrashButton.setImage(dechet?.poubelle.image, for: .highlighted)
+        //genere l'image du bouton gauche en normal (afficher)
+        rightTrashButton.setImage(generateWrongAnswer(rightAnswer: (dechet?.poubelle.image)!).image, for: .normal)
+        // permet d'eviter le chanegemnt de couleur de la poubelle quand elle est cliqué
+        rightTrashButton.setImage(generateWrongAnswer(rightAnswer: (dechet?.poubelle.image)!).image, for: .highlighted)
         
-           //Mauvaise réponse differente de bonne réponse
-           rightTrashButton.imageView?.image = generateWrongAnswer(rightAnswer: dechets[randomNumber].poubelle.image).image
     }
     
     // remplir les tableaux (déchets et poubelles)
@@ -108,7 +106,6 @@ class GameControllerView: UIViewController{
     
     // permet de générer la mauvaise poubelle
     func generateWrongAnswer(rightAnswer : UIImage) -> Poubelle{
-        
         var wrongAnswer = poubelleImages.randomElement()
         while rightAnswer.isEqual(wrongAnswer?.image){
             wrongAnswer = generateWrongAnswer(rightAnswer: rightAnswer)
@@ -116,113 +113,4 @@ class GameControllerView: UIViewController{
         return wrongAnswer!
     }
     
-    // genere un n° random entre 0 et dechets.count
-    func generateRandom(max: Int) -> Int {
-        return Int.random(in: 0..<max)
-    }
-    // passer sur l'ecran right answer if score = 10
-   
-    
-//    // function qui augmente le score
-//    func increaseScore(){
-//              var score: Int = 0
-//              score += 10
-//              scoreLabel.text = String(score)
-//          }
-    
-    
 }
-
-
-//        let random:UIImage = dechetImage.randomElement()!!
-//        dechetImageView.image = random
-//        leftTrashButton.imageView =
-
-
-        
-//        func random(){
-//            let randomImage = dechetImage.randomElement()
-//            dechetImageView.image = randomImage!!
-//
-//            if dechetImageView == UIImage(named: "bouteille") {
-//                leftTrashButton.setImage(UIImage(named: "poubelleBlanche"), for: .normal)
-//                leftTrashLabel.text = "Blanche"
-//            }else if dechetImageView == UIImage(named: "carton") {
-//                leftTrashButton.setImage(UIImage(named: "poubelleJaune"), for: .normal)
-//                leftTrashLabel.text = "Jaune"
-//            }else if dechetImageView == UIImage(named: "papier") {
-//                leftTrashButton.setImage(UIImage(named: "poubelleJaune"), for: .normal)
-//                leftTrashLabel.text = "Jaune"
-//            }else if dechetImageView == UIImage(named: "tomateVerte") {
-//                leftTrashButton.setImage(UIImage(named: "poubelleMarron"), for: .normal)
-//                leftTrashLabel.text = "Marron"
-//        }
-//
-//}
-//        random()
-
-
-        
-        
-//         determine image dechet au hasard
-//        let randomImage = dechetImage.randomElement()
-//        dechetImageView.image = randomImage!!
-
-
-
-        
-//        switch dechetImageView {
-//        case UIImage(named: "bouteille"):
-//            leftTrashButton.setImage(UIImage(named: "poubelleBlanche"), for: .normal)
-//            leftTrashLabel.text = "Blanche"
-//        case UIImage(named: "carton"):
-//            leftTrashButton.setImage(UIImage(named: "poubelleJaune"), for: .normal)
-//            leftTrashLabel.text = "Jaune"
-//        case UIImage(named: "papier"):
-//            leftTrashButton.setImage(UIImage(named: "poubelleJaune"), for: .normal)
-//            leftTrashLabel.text = "Jaune"
-//        case UIImage(named: "tomateVerte"):
-//            leftTrashButton.setImage(UIImage(named: "poubelleMarron"), for: .normal)
-//            leftTrashLabel.text = "Marron"
-//        default:
-//            dechetImageView.image = randomImage!!
-//        }
-        
-
-        // determine les image button ("Poubelle") et label en fonction de l'image dechet
-//        if dechetImageView == UIImage(named: "bouteille") {
-//            leftTrashButton.setImage(UIImage(named: "poubelleBlanche"), for: .normal)
-//            leftTrashLabel.text = "Blanche"
-//        }else if dechetImageView == UIImage(named: "carton") {
-//            leftTrashButton.setImage(UIImage(named: "poubelleJaune"), for: .normal)
-//            leftTrashLabel.text = "Jaune"
-//        }else if dechetImageView == UIImage(named: "papier") {
-//            leftTrashButton.setImage(UIImage(named: "poubelleJaune"), for: .normal)
-//            leftTrashLabel.text = "Jaune"
-//        }else if dechetImageView == UIImage(named: "tomateVerte") {
-//            leftTrashButton.setImage(UIImage(named: "poubelleMarron"), for: .normal)
-//            leftTrashLabel.text = "Marron"
-//
-//    }
-//        func random(){
-//            let randomImage = dechetImage.randomElement()
-//                dechetImageView.image = randomImage!!
-//            if dechetImageView == UIImage(named: "bouteille") {
-//                leftTrashButton.setImage(UIImage(named: "poubelleBlanche"), for: .normal)
-//                leftTrashLabel.text = "Blanche"
-//            }else if dechetImageView == UIImage(named: "carton") {
-//                leftTrashButton.setImage(UIImage(named: "poubelleJaune"), for: .normal)
-//                leftTrashLabel.text = "Jaune"
-//            }else if dechetImageView == UIImage(named: "papier") {
-//                leftTrashButton.setImage(UIImage(named: "poubelleJaune"), for: .normal)
-//                leftTrashLabel.text = "Jaune"
-//            }else if dechetImageView == UIImage(named: "tomateVerte") {
-//                leftTrashButton.setImage(UIImage(named: "poubelleMarron"), for: .normal)
-//                leftTrashLabel.text = "Marron"
-//
-//        }
-//        }
-//        random()
-
-
-

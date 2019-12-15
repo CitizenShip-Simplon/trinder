@@ -10,7 +10,7 @@
         <!--Right Answer View Controller-->
         <scene sceneID="b2O-DR-ZUt">
             <objects>
-                <viewController id="BJ3-Vj-nHB" customClass="RightAnswerViewController" customModule="Trinder" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="right" id="BJ3-Vj-nHB" customClass="RightAnswerViewController" customModule="Trinder" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="o32-3j-iSn">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

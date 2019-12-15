@@ -20,7 +20,7 @@
         <!--RightAnswer-->
         <scene sceneID="cIH-s3-xfk">
             <objects>
-                <viewControllerPlaceholder storyboardName="RightAnswer" id="kXO-Rz-cpj" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardIdentifier="right" storyboardName="RightAnswer" id="kXO-Rz-cpj" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="enH-L9-qjk"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JWF-iQ-MGb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -65,11 +65,10 @@
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="68" id="pNP-yS-oVO"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="1"/>
-                                <state key="normal" title="Button" image="poubelleJaune"/>
+                                <state key="normal" title="Button"/>
                                 <connections>
                                     <action selector="onButtonClicked:" destination="SgC-PL-n7n" eventType="touchUpInside" id="gyG-We-fWg"/>
-                                    <action selector="rightClic:" destination="SgC-PL-n7n" eventType="touchUpInside" id="Abo-Ep-eb4"/>
-                                    <segue destination="kXO-Rz-cpj" kind="show" id="SJb-li-SFn"/>
+                                    <action selector="rightClick:" destination="SgC-PL-n7n" eventType="touchUpInside" id="Abo-Ep-eb4"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EX2-H4-LhX">
@@ -81,7 +80,7 @@
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="64" id="vJt-0r-02U"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="1"/>
-                                <state key="normal" title="Button" image="trashGreen"/>
+                                <state key="normal" title="Button"/>
                                 <connections>
                                     <action selector="onButtonClicked:" destination="SgC-PL-n7n" eventType="touchUpInside" id="txW-hd-Yba"/>
                                     <segue destination="4uJ-qu-rJL" kind="show" id="HVV-PK-zFx"/>
@@ -125,6 +124,7 @@
                         <outlet property="leftTrashButton" destination="Lco-0M-2gi" id="Wv3-xO-aCj"/>
                         <outlet property="rightTrashButton" destination="EX2-H4-LhX" id="S4o-sU-TZ7"/>
                         <outlet property="scoreLabel" destination="Ih1-Uo-1gj" id="LlU-8L-sLo"/>
+                        <segue destination="kXO-Rz-cpj" kind="presentation" identifier="RightAnswer" id="8Zc-U0-1PN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FcZ-a3-TIB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -134,7 +134,6 @@
     </scenes>
     <resources>
         <image name="papier" width="96" height="96"/>
-        <image name="poubelleJaune" width="64" height="64"/>
         <image name="tabBarItem:V4J-yc-MUp:image" width="64" height="40">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGV1hYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK8QEgcI
@@ -454,6 +453,5 @@ iTaUNpw2qTa2Nss20DbUNtY22DbaNuM26DbuNvY2+Db6Nvw2/jcDNwtId0h5SH5IjEiQSJdInEipSKxI
 uUi+SMZIyUjOSNZI2UjrSO5I8wAAAAAAAAIBAAAAAAAAAFsAAAAAAAAAAAAAAAAAAEj1A
 </mutableData>
         </image>
-        <image name="trashGreen" width="64" height="64"/>
     </resources>
 </document>
