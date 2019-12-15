@@ -9,8 +9,12 @@
 import UIKit
 
 class GameControllerView: UIViewController{
-    var score = 0
+    @IBOutlet weak var scoreLabel: UILabel!
+    @IBOutlet weak var dechetImageView: UIImageView!
+    @IBOutlet weak var leftTrashButton: UIButton!
+    @IBOutlet weak var rightTrashButton: UIButton!
     
+    var score = 0
     //structure poubelle: image couleur poubelle
     struct Poubelle {
         let image:UIImage
@@ -21,7 +25,7 @@ class GameControllerView: UIViewController{
     }
     // structuree dechet -> image des poubelle good answer
     struct Dechet{
-        let poubelle:Poubelle
+        let poubelle:Poubelle// poubelle.image - image de bonne poubelle
         let image:UIImage  // image des déchets
         
         // inialisation
@@ -30,65 +34,79 @@ class GameControllerView: UIViewController{
             self.poubelle = typeDechet
         }
     }
-
-    // création des 4 poubelless et leur images
-    
-    let poubelleBlanche = Poubelle(image: UIImage(named: "poubelleBlanche")!)
-    let poubelleVerte = Poubelle(image: UIImage(named: "poubelleVerte")!)
-    let poubelleMarron = Poubelle(image: UIImage(named: "poubelleMarron")!)
-    let poubelleJaune = Poubelle(image: UIImage(named: "poubelleJaune")!)
     
     // création de tableau
     var dechets = [Dechet]()
     var poubelleImages = [Poubelle]()
-
-    @IBOutlet weak var scoreLabel: UILabel!
-    @IBOutlet weak var dechetImageView: UIImageView!
-    @IBOutlet weak var leftTrashButton: UIButton!
-    @IBOutlet weak var rightTrashButton: UIButton!
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         // ajout des images dans le tableau
-        initViews()
+        getData()// création des 4 poubelless et leur images et la liste des déchets avec leur image et leurs bonne réponses
         generateQuestion()
         scoreLabel.text = "\(score)"
     }
     
-    // permet quand on clic sur le boutons de regenerer une question
-    @IBAction func onButtonClicked(_ sender: UIButton) {
-        generateQuestion()
-        
-    }
-    @IBAction func rightClick(_ sender: UIButton) {
-        // augmente le score à chaque clic
-        score += 1
-        scoreLabel.text = "\(score)"
-        if score % 5 == 0{
-            performSegue(withIdentifier: "RightAnswer", sender: sender) // charge l'ecran Right Answer quand score/5 = 0
+    func generateQuestion() {
+        // reset les actions sur le boutons
+        leftTrashButton.removeTarget(nil, action: nil, for: .allEvents)
+        rightTrashButton.removeTarget(nil, action: nil, for: .allEvents)
+        let number = Int.random(in: 0...1)
+        if number == 1 { //  1 = bonne réponse à gauche
+            showAnswer(rightAnswerButton: leftTrashButton, wrongAnswerButton: rightTrashButton)
+        } else { // 0 = bonne réponse à droite
+            showAnswer(rightAnswerButton: rightTrashButton, wrongAnswerButton: leftTrashButton)
         }
     }
-    func generateQuestion() {
-        //genere un nombre random = max dechets.randomElement()
-        let dechet = dechets.randomElement()
-        dechetImageView.image = dechet?.image
-        //genere l'image du bouton gauche en normal (afficher)
-        leftTrashButton.setImage(dechet?.poubelle.image, for: .normal)
-        //genere l'image du dechet
-        dechetImageView.image = dechet?.image
-        // permet d'eviter le chanegemnt de couleur de la poubelle quand elle est cliqué
-        leftTrashButton.setImage(dechet?.poubelle.image, for: .highlighted)
-        //genere l'image du bouton gauche en normal (afficher)
-        rightTrashButton.setImage(generateWrongAnswer(rightAnswer: (dechet?.poubelle.image)!).image, for: .normal)
-        // permet d'eviter le chanegemnt de couleur de la poubelle quand elle est cliqué
-        rightTrashButton.setImage(generateWrongAnswer(rightAnswer: (dechet?.poubelle.image)!).image, for: .highlighted)
-        
+    
+    func showAnswer(rightAnswerButton: UIButton, wrongAnswerButton: UIButton){
+           //genere un nombre random = max dechets.randomElement()
+           let dechet = dechets.randomElement()
+           dechetImageView.image = dechet?.image
+           //genere l'image du dechet
+           dechetImageView.image = dechet?.image
+           //genere l'image du bouton gauche en normal (afficher)
+           rightAnswerButton.setImage(dechet?.poubelle.image, for: .normal)
+           // permet d'eviter le chanegemnt de couleur de la poubelle quand elle est cliqué
+           rightAnswerButton.setImage(dechet?.poubelle.image, for: .highlighted)
+           //genere l'image du bouton gauche en normal (afficher)
+           wrongAnswerButton.setImage(generateWrongAnswer(rightAnswer: (dechet?.poubelle.image)!).image, for: .normal)
+           // permet d'eviter le chanegemnt de couleur de la poubelle quand elle est cliqué
+           wrongAnswerButton.setImage(generateWrongAnswer(rightAnswer: (dechet?.poubelle.image)!).image, for: .highlighted)
+           // addTarget = donne une action au bouton = la fonction rightAnswerClicked est lancé = boutton presser
+           rightAnswerButton.addTarget(self, action: #selector (rightAnswerClicked), for: .touchUpInside)
+           wrongAnswerButton.addTarget(self, action: #selector (wrongAnswerClicked), for: .touchUpInside)
+       }
+    
+    // permet de générer la mauvaise poubelle -> function récursive elle s'appelle elle meme
+    func generateWrongAnswer(rightAnswer : UIImage) -> Poubelle{
+        var wrongAnswer = poubelleImages.randomElement()// donne moi une poubelle au hasard
+        while rightAnswer.isEqual(wrongAnswer?.image){ // tant que les poubelle sont d
+            wrongAnswer = generateWrongAnswer(rightAnswer: rightAnswer)
+        }
+        return wrongAnswer!
     }
+       
+       @objc func rightAnswerClicked(){
+           score += 1
+           scoreLabel.text = "\(score)"
+           if score % 5 == 0{
+               performSegue(withIdentifier: "RightAnswer", sender: UIButton.self) // penser a nommer le segue
+           }
+           generateQuestion()
+       }
+       
+       @objc func wrongAnswerClicked() {
+           performSegue(withIdentifier: "WrongAnswer", sender: UIButton.self)
+           generateQuestion()
+       }
     
     // remplir les tableaux (déchets et poubelles)
-    func initViews(){
+    func getData(){
+        let poubelleBlanche = Poubelle(image: UIImage(named: "poubelleBlanche")!)
+        let poubelleVerte = Poubelle(image: UIImage(named: "poubelleVerte")!)
+        let poubelleMarron = Poubelle(image: UIImage(named: "poubelleMarron")!)
+        let poubelleJaune = Poubelle(image: UIImage(named: "poubelleJaune")!)
         poubelleImages.append(poubelleJaune)
         poubelleImages.append(poubelleVerte)
         poubelleImages.append(poubelleJaune)
@@ -103,14 +121,5 @@ class GameControllerView: UIViewController{
         dechets.append(Dechet(typeDechet: poubelleVerte, image: UIImage(named: "sacPoubelle")!))
         dechets.append(Dechet(typeDechet: poubelleVerte, image: UIImage(named: "dechetVert")!))
     }
-    
-    // permet de générer la mauvaise poubelle
-    func generateWrongAnswer(rightAnswer : UIImage) -> Poubelle{
-        var wrongAnswer = poubelleImages.randomElement()
-        while rightAnswer.isEqual(wrongAnswer?.image){
-            wrongAnswer = generateWrongAnswer(rightAnswer: rightAnswer)
-        }
-        return wrongAnswer!
-    }
-    
 }
+

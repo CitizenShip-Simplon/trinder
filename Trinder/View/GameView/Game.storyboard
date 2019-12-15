@@ -66,10 +66,6 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="1"/>
                                 <state key="normal" title="Button"/>
-                                <connections>
-                                    <action selector="onButtonClicked:" destination="SgC-PL-n7n" eventType="touchUpInside" id="gyG-We-fWg"/>
-                                    <action selector="rightClick:" destination="SgC-PL-n7n" eventType="touchUpInside" id="Abo-Ep-eb4"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EX2-H4-LhX">
                                 <rect key="frame" x="259" y="625" width="68" height="64"/>
@@ -81,10 +77,6 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="1"/>
                                 <state key="normal" title="Button"/>
-                                <connections>
-                                    <action selector="onButtonClicked:" destination="SgC-PL-n7n" eventType="touchUpInside" id="txW-hd-Yba"/>
-                                    <segue destination="4uJ-qu-rJL" kind="show" id="HVV-PK-zFx"/>
-                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JVP-Hx-83u">
                                 <rect key="frame" x="174" y="158" width="66" height="27"/>
@@ -125,6 +117,7 @@
                         <outlet property="rightTrashButton" destination="EX2-H4-LhX" id="S4o-sU-TZ7"/>
                         <outlet property="scoreLabel" destination="Ih1-Uo-1gj" id="LlU-8L-sLo"/>
                         <segue destination="kXO-Rz-cpj" kind="presentation" identifier="RightAnswer" id="8Zc-U0-1PN"/>
+                        <segue destination="4uJ-qu-rJL" kind="show" identifier="WrongAnswer" id="SSr-N7-mRr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FcZ-a3-TIB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
