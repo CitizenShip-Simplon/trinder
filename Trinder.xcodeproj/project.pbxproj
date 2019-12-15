@@ -104,6 +104,7 @@
 		305F2C3C23A2E40F00C02C4F /* GameView */ = {
 			isa = PBXGroup;
 			children = (
+				305F2C3A23A2E2D300C02C4F /* RightAnswerControllerView.swift */,
 				305F2C3D23A35E2C00C02C4F /* GameControllerView.swift */,
 			);
 			path = GameView;
@@ -160,8 +161,8 @@
 		BD72E5412397BB50009DC584 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				301D606F2396B89E00AB84E1 /* AppDelegate.swift */,
 				301D60712396B89E00AB84E1 /* SceneDelegate.swift */,
+				301D606F2396B89E00AB84E1 /* AppDelegate.swift */,
 				301D60782396B89F00AB84E1 /* Assets.xcassets */,
 			);
 			path = "Supporting Files";
@@ -170,7 +171,6 @@
 		BD72E5422397C5D4009DC584 /* Contoller */ = {
 			isa = PBXGroup;
 			children = (
-				305F2C3A23A2E2D300C02C4F /* RightAnswerControllerView.swift */,
 				305F2C3C23A2E40F00C02C4F /* GameView */,
 				305F2C3723A2DE4F00C02C4F /* ChatBotControllerView */,
 				BD72E5432397C5ED009DC584 /* HistoryController */,
