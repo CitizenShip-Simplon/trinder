@@ -116,8 +116,8 @@
                         <outlet property="leftTrashButton" destination="Lco-0M-2gi" id="Wv3-xO-aCj"/>
                         <outlet property="rightTrashButton" destination="EX2-H4-LhX" id="S4o-sU-TZ7"/>
                         <outlet property="scoreLabel" destination="Ih1-Uo-1gj" id="LlU-8L-sLo"/>
-                        <segue destination="kXO-Rz-cpj" kind="presentation" identifier="RightAnswer" id="8Zc-U0-1PN"/>
                         <segue destination="4uJ-qu-rJL" kind="show" identifier="WrongAnswer" id="SSr-N7-mRr"/>
+                        <segue destination="kXO-Rz-cpj" kind="show" identifier="RightAnswer" id="tfd-Mf-iex"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FcZ-a3-TIB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
